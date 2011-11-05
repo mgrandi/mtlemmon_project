@@ -23,7 +23,35 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+        CGRect uiViewBounds = self.view.bounds;
+        
+        // set the frame to be the size of the size of the view (the UIImageView)
+        self.view.frame = CGRectMake(uiViewBounds.origin.x, uiViewBounds.origin.y, uiViewBounds.size.width, uiViewBounds.size.height);
+        
+        
+        // **************
+        // Bear Canyon Pin
+        // ***************
+        // create the UIImage that is the pin
+        UIImage *bearCanyonPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+        
+        
+        // create the image view that will hold the pin
+        UIImageView *pinView = [[UIImageView alloc] initWithImage:bearCanyonPin];
+        
+        // add the image view as a subview to the main imageview
+        [self.view addSubview:pinView];
+        
+        pinView.frame = CGRectMake(226, 205, bearCanyonPin.size.width, bearCanyonPin.size.height);
+        
+        // **************
+        // Windy Point Vista pin
+        // ***************
+        
+        
+        
+        
     }
     return self;
 }
