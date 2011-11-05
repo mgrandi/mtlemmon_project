@@ -12,7 +12,7 @@
 		65EDEAAD1465CEB00009AC84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAC1465CEB00009AC84 /* CoreGraphics.framework */; };
 		65EDEAB31465CEB00009AC84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65EDEAB11465CEB00009AC84 /* InfoPlist.strings */; };
 		65EDEAB51465CEB00009AC84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB41465CEB00009AC84 /* main.m */; };
-		65EDEAB91465CEB00009AC84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB81465CEB00009AC84 /* AppDelegate.m */; };
+		65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +20,12 @@
 		65EDEAA81465CEB00009AC84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65EDEAAA1465CEB00009AC84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65EDEAAC1465CEB00009AC84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		65EDEAB01465CEB00009AC84 /* mtlemmon_project-Info.plist */ = {isa = PBXFileReference; path = "mtlemmon_project-Info.plist"; sourceTree = "<group>"; };
+		65EDEAB01465CEB00009AC84 /* mtlemmon_project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "mtlemmon_project-Info.plist"; sourceTree = "<group>"; };
 		65EDEAB21465CEB00009AC84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		65EDEAB41465CEB00009AC84 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		65EDEAB61465CEB00009AC84 /* mtlemmon_project-Prefix.pch */ = {isa = PBXFileReference; path = "mtlemmon_project-Prefix.pch"; sourceTree = "<group>"; };
-		65EDEAB71465CEB00009AC84 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
-		65EDEAB81465CEB00009AC84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		65EDEAB61465CEB00009AC84 /* mtlemmon_project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mtlemmon_project-Prefix.pch"; sourceTree = "<group>"; };
+		65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtlemmonAppDelegate.h; sourceTree = "<group>"; };
+		65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtlemmonAppDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +47,6 @@
 			children = (
 				65EDEAAE1465CEB00009AC84 /* mtlemmon_project */,
 				65EDEAA71465CEB00009AC84 /* Frameworks */,
-				65EDEAA51465CEB00009AC84 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +56,7 @@
 				65EDEAA41465CEB00009AC84 /* mtlemmon_project.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		65EDEAA71465CEB00009AC84 /* Frameworks */ = {
@@ -72,8 +72,9 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
-				65EDEAB71465CEB00009AC84 /* AppDelegate.h */,
-				65EDEAB81465CEB00009AC84 /* AppDelegate.m */,
+				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
+				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
+				65EDEAA51465CEB00009AC84 /* Products */,
 				65EDEAAF1465CEB00009AC84 /* Supporting Files */,
 			);
 			path = mtlemmon_project;
@@ -152,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65EDEAB51465CEB00009AC84 /* main.m in Sources */,
-				65EDEAB91465CEB00009AC84 /* AppDelegate.m in Sources */,
+				65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +255,7 @@
 				65EDEABE1465CEB00009AC84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
