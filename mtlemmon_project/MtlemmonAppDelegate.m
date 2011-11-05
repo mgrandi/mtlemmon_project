@@ -7,7 +7,16 @@
 //
 
 #import "MtlemmonAppDelegate.h"
+#import "MountianMapViewController.h"
 
+
+/*
+ MtlemmonAppDelegate.m 
+ the application delegate for the program
+ 
+ 
+ 
+ */
 @implementation MtlemmonAppDelegate
 
 @synthesize window = _window;
@@ -24,6 +33,13 @@
     
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    // create the MountianMapViewController and set it as the root view controller
+    MountianMapViewController *mapViewController = [[MountianMapViewController alloc] init ];
+    
+    [self.window setRootViewController:mapViewController];
+    
+    [mapViewController release];
     
     
     

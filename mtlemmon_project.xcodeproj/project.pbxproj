@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		650F0B091465EC0900978029 /* MountianMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B081465EC0900978029 /* MountianMapView.xib */; };
+		650F0B0D1465EC8C00978029 /* MountianMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountianMapViewController.m */; };
 		65EDEAA91465CEB00009AC84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAA81465CEB00009AC84 /* UIKit.framework */; };
 		65EDEAAB1465CEB00009AC84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAA1465CEB00009AC84 /* Foundation.framework */; };
 		65EDEAAD1465CEB00009AC84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAC1465CEB00009AC84 /* CoreGraphics.framework */; };
@@ -16,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		650F0B081465EC0900978029 /* MountianMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountianMapView.xib; sourceTree = "<group>"; };
+		650F0B0B1465EC8C00978029 /* MountianMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountianMapViewController.h; sourceTree = "<group>"; };
+		650F0B0C1465EC8C00978029 /* MountianMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountianMapViewController.m; sourceTree = "<group>"; };
 		65EDEAA41465CEB00009AC84 /* mtlemmon_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtlemmon_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EDEAA81465CEB00009AC84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65EDEAAA1465CEB00009AC84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +77,9 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
+				650F0B081465EC0900978029 /* MountianMapView.xib */,
+				650F0B0B1465EC8C00978029 /* MountianMapViewController.h */,
+				650F0B0C1465EC8C00978029 /* MountianMapViewController.m */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
 				65EDEAA51465CEB00009AC84 /* Products */,
@@ -142,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65EDEAB31465CEB00009AC84 /* InfoPlist.strings in Resources */,
+				650F0B091465EC0900978029 /* MountianMapView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +163,7 @@
 			files = (
 				65EDEAB51465CEB00009AC84 /* main.m in Sources */,
 				65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */,
+				650F0B0D1465EC8C00978029 /* MountianMapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
