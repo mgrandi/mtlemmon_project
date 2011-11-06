@@ -38,16 +38,61 @@
         
         
         // create the image view that will hold the pin
-        UIImageView *pinView = [[UIImageView alloc] initWithImage:bearCanyonPin];
+        UIImageView *pinViewBearCanyon = [[UIImageView alloc] initWithImage:bearCanyonPin];
         
         // add the image view as a subview to the main imageview
-        [self.view addSubview:pinView];
+        [self.view addSubview:pinViewBearCanyon];
         
-        pinView.frame = CGRectMake(226, 205, bearCanyonPin.size.width, bearCanyonPin.size.height);
+        pinViewBearCanyon.frame = CGRectMake(226, 205, bearCanyonPin.size.width, bearCanyonPin.size.height);
+        
+        // **************
+        // inspiration rock pin
+        // ***************
+        
+        // create the UIImage that is the pin
+        UIImage *inspirationRockPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+        
+        
+        // create the image view that will hold the pin
+        UIImageView *pinViewInspiration = [[UIImageView alloc] initWithImage:inspirationRockPin];
+        
+        // add the image view as a subview to the main imageview
+        [self.view addSubview:pinViewInspiration];
+        
+        pinViewInspiration.frame = CGRectMake(105, 25, inspirationRockPin.size.width, inspirationRockPin.size.height);
         
         // **************
         // Windy Point Vista pin
         // ***************
+        
+        // create the UIImage that is the pin
+        UIImage *windyPointPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+        
+        
+        // create the image view that will hold the pin
+        UIImageView *pinViewWindy = [[UIImageView alloc] initWithImage:windyPointPin];
+        
+        // add the image view as a subview to the main imageview
+        [self.view addSubview:pinViewWindy];
+        
+        pinViewWindy.frame = CGRectMake(170, 213, windyPointPin.size.width, windyPointPin.size.height);
+        
+        
+        // **************
+        // Molino canyon pin
+        // ***************
+        
+        // create the UIImage that is the pin
+        UIImage *molinoPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+        
+        
+        // create the image view that will hold the pin
+        UIImageView *pinViewMolino = [[UIImageView alloc] initWithImage:molinoPin];
+        
+        // add the image view as a subview to the main imageview
+        [self.view addSubview:pinViewMolino];
+        
+        pinViewMolino.frame = CGRectMake(230, 303, molinoPin.size.width, molinoPin.size.height);
         
         
         
