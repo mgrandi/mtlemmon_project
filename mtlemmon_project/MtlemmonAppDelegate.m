@@ -20,11 +20,14 @@
 @implementation MtlemmonAppDelegate
 
 @synthesize window = _window;
+@synthesize navController;
 
 - (void)dealloc
 {
     [_window release];
+    [navController release];
     [super dealloc];
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -36,10 +39,12 @@
     
     // create the MountianMapViewController and set it as the root view controller
     MountianMapViewController *mapViewController = [[MountianMapViewController alloc] init ];
-    
-    [self.window setRootViewController:mapViewController];
-    
+        
+    navController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+        
     [mapViewController release];
+    
+    [self.window setRootViewController: navController];
     
     
     

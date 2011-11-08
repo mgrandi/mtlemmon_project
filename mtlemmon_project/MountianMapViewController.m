@@ -96,7 +96,6 @@
         
         
         
-        
     }
     return self;
 }
@@ -137,6 +136,15 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+
+-(void) viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:YES];
+    
+    [self.navigationController setNavigationBarHidden:YES];
+    
 }
 
 @end

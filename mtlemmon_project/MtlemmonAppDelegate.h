@@ -15,8 +15,14 @@
  
  
  */
-@interface MtlemmonAppDelegate : UIResponder <UIApplicationDelegate>
+@interface MtlemmonAppDelegate : UIResponder <UIApplicationDelegate> {
+    
+    UINavigationController *navController;
+    
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, retain) UINavigationController *navController;
 
 @end

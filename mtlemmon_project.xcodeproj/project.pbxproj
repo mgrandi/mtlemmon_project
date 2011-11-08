@@ -17,6 +17,10 @@
 		65EDEAB31465CEB00009AC84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65EDEAB11465CEB00009AC84 /* InfoPlist.strings */; };
 		65EDEAB51465CEB00009AC84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB41465CEB00009AC84 /* main.m */; };
 		65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */; };
+		65F77B3A1469C7B90034CF49 /* BearCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B391469C7B90034CF49 /* BearCanyonViewController.m */; };
+		65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */; };
+		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
+		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +39,14 @@
 		65EDEAB61465CEB00009AC84 /* mtlemmon_project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mtlemmon_project-Prefix.pch"; sourceTree = "<group>"; };
 		65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtlemmonAppDelegate.h; sourceTree = "<group>"; };
 		65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtlemmonAppDelegate.m; sourceTree = "<group>"; };
+		65F77B381469C7B90034CF49 /* BearCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BearCanyonViewController.h; sourceTree = "<group>"; };
+		65F77B391469C7B90034CF49 /* BearCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BearCanyonViewController.m; sourceTree = "<group>"; };
+		65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspirationRockViewController.h; sourceTree = "<group>"; };
+		65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InspirationRockViewController.m; sourceTree = "<group>"; };
+		65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindyPointViewController.h; sourceTree = "<group>"; };
+		65F77B401469C7E60034CF49 /* WindyPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindyPointViewController.m; sourceTree = "<group>"; };
+		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
+		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +100,14 @@
 				650F0B0C1465EC8C00978029 /* MountianMapViewController.m */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
+				65F77B381469C7B90034CF49 /* BearCanyonViewController.h */,
+				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
+				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
+				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
+				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
+				65F77B401469C7E60034CF49 /* WindyPointViewController.m */,
+				65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */,
+				65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */,
 				65EDEAA51465CEB00009AC84 /* Products */,
 				65EDEAAF1465CEB00009AC84 /* Supporting Files */,
 			);
@@ -172,6 +192,10 @@
 				65EDEAB51465CEB00009AC84 /* main.m in Sources */,
 				65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */,
 				650F0B0D1465EC8C00978029 /* MountianMapViewController.m in Sources */,
+				65F77B3A1469C7B90034CF49 /* BearCanyonViewController.m in Sources */,
+				65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */,
+				65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */,
+				65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
