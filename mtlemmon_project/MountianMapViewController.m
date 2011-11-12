@@ -36,11 +36,11 @@
         // create the UIImage that is the pin
         UIImage *bearCanyonPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
         
+        UIButton *pinViewBearCanyon = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        // create the image view that will hold the pin
-        UIImageView *pinViewBearCanyon = [[UIImageView alloc] initWithImage:bearCanyonPin];
+        [pinViewBearCanyon setImage:bearCanyonPin forState:UIControlStateNormal];
         
-        // add the image view as a subview to the main imageview
+        // add the button as a subview to the main imageview
         [self.view addSubview:pinViewBearCanyon];
         
         pinViewBearCanyon.frame = CGRectMake(226, 205, bearCanyonPin.size.width, bearCanyonPin.size.height);
@@ -51,15 +51,16 @@
         
         // create the UIImage that is the pin
         UIImage *inspirationRockPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+
         
+        UIButton *pinViewinspiration = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        // create the image view that will hold the pin
-        UIImageView *pinViewInspiration = [[UIImageView alloc] initWithImage:inspirationRockPin];
+        [pinViewinspiration setImage:inspirationRockPin forState:UIControlStateNormal];
         
-        // add the image view as a subview to the main imageview
-        [self.view addSubview:pinViewInspiration];
+        // add the button as a subview to the main imageview
+        [self.view addSubview:pinViewinspiration];
         
-        pinViewInspiration.frame = CGRectMake(105, 25, inspirationRockPin.size.width, inspirationRockPin.size.height);
+        pinViewinspiration.frame = CGRectMake(105, 25, inspirationRockPin.size.width, inspirationRockPin.size.height);
         
         // **************
         // Windy Point Vista pin
@@ -67,10 +68,10 @@
         
         // create the UIImage that is the pin
         UIImage *windyPointPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
+                
+        UIButton *pinViewWindy = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        
-        // create the image view that will hold the pin
-        UIImageView *pinViewWindy = [[UIImageView alloc] initWithImage:windyPointPin];
+        [pinViewWindy setImage:windyPointPin forState:UIControlStateNormal];
         
         // add the image view as a subview to the main imageview
         [self.view addSubview:pinViewWindy];
@@ -85,9 +86,9 @@
         // create the UIImage that is the pin
         UIImage *molinoPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
         
+        UIButton *pinViewMolino = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        // create the image view that will hold the pin
-        UIImageView *pinViewMolino = [[UIImageView alloc] initWithImage:molinoPin];
+        [pinViewMolino setImage:molinoPin forState:UIControlStateNormal];
         
         // add the image view as a subview to the main imageview
         [self.view addSubview:pinViewMolino];
