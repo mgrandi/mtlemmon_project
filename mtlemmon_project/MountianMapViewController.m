@@ -7,6 +7,7 @@
 //
 
 #import "MountianMapViewController.h"
+#import "BearCanyonViewController.h"
 
 /*
  MountianMapViewController.m
@@ -39,6 +40,8 @@
         UIButton *pinViewBearCanyon = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [pinViewBearCanyon setImage:bearCanyonPin forState:UIControlStateNormal];
+        
+        [pinViewBearCanyon addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the button as a subview to the main imageview
         [self.view addSubview:pinViewBearCanyon];
@@ -99,6 +102,16 @@
         
     }
     return self;
+}
+
+-(void) bearCanyonPressed:(id)sender {
+    
+    
+    BearCanyonViewController *bc = [[BearCanyonViewController alloc] init];
+    
+    [[self navigationController] pushViewController:bc animated:YES];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
