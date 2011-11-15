@@ -27,6 +27,10 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(void) viewDidAppear:(BOOL)animated {
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
 #pragma mark - View lifecycle
 
 /*

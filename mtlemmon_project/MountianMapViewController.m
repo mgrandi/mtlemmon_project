@@ -8,6 +8,9 @@
 
 #import "MountianMapViewController.h"
 #import "BearCanyonViewController.h"
+#import "InspirationRockViewController.h"
+#import "WindyPointViewController.h"
+#import "MolinoCanyonViewController.h"
 
 /*
  MountianMapViewController.m
@@ -40,7 +43,6 @@
         UIButton *pinViewBearCanyon = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [pinViewBearCanyon setImage:bearCanyonPin forState:UIControlStateNormal];
-        
         [pinViewBearCanyon addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the button as a subview to the main imageview
@@ -54,16 +56,16 @@
         
         // create the UIImage that is the pin
         UIImage *inspirationRockPin = [UIImage imageNamed:@"Blue_Map_Pin_small.png"];
-
         
-        UIButton *pinViewinspiration = [UIButton buttonWithType:UIButtonTypeCustom];
+        UIButton *pinViewInspiration = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        [pinViewinspiration setImage:inspirationRockPin forState:UIControlStateNormal];
+        [pinViewInspiration setImage:inspirationRockPin forState:UIControlStateNormal];
+        [pinViewInspiration addTarget:self action:@selector(inspirationRockPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the button as a subview to the main imageview
-        [self.view addSubview:pinViewinspiration];
+        [self.view addSubview:pinViewInspiration];
         
-        pinViewinspiration.frame = CGRectMake(105, 25, inspirationRockPin.size.width, inspirationRockPin.size.height);
+        pinViewInspiration.frame = CGRectMake(105, 25, inspirationRockPin.size.width, inspirationRockPin.size.height);
         
         // **************
         // Windy Point Vista pin
@@ -75,6 +77,7 @@
         UIButton *pinViewWindy = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [pinViewWindy setImage:windyPointPin forState:UIControlStateNormal];
+        [pinViewWindy addTarget:self action:@selector(windyPointPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the image view as a subview to the main imageview
         [self.view addSubview:pinViewWindy];
@@ -92,26 +95,39 @@
         UIButton *pinViewMolino = [UIButton buttonWithType:UIButtonTypeCustom];
         
         [pinViewMolino setImage:molinoPin forState:UIControlStateNormal];
+        [pinViewMolino addTarget:self action:@selector(molinoCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the image view as a subview to the main imageview
         [self.view addSubview:pinViewMolino];
         
         pinViewMolino.frame = CGRectMake(230, 303, molinoPin.size.width, molinoPin.size.height);
         
-        
-        
     }
     return self;
 }
 
+// This method will be called when the Bear Canyon pin is pressed
 -(void) bearCanyonPressed:(id)sender {
-    
-    
     BearCanyonViewController *bc = [[BearCanyonViewController alloc] init];
-    
     [[self navigationController] pushViewController:bc animated:YES];
-    
-    
+}
+
+// This method will be called when the Inspiration Rock pin is pressed
+-(void) inspirationRockPressed:(id)sender {
+    InspirationRockViewController *ir = [[InspirationRockViewController alloc] init];
+    [[self navigationController] pushViewController:ir animated:YES];
+}
+
+// This method will be called when the Windy Point pin is pressed
+-(void) windyPointPressed:(id)sender {
+    WindyPointViewController *wp = [[WindyPointViewController alloc] init];
+    [[self navigationController] pushViewController:wp animated:YES];
+}
+
+// This method will be called when the Molino Canyon pin is pressed
+-(void) molinoCanyonPressed:(id)sender {
+    MolinoCanyonViewController *mc = [[MolinoCanyonViewController alloc] init];
+    [[self navigationController] pushViewController:mc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
