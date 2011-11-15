@@ -22,6 +22,8 @@
 		65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */; };
 		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
+		B8A36AB41471D81300E654D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB21471D81300E654D1 /* Default.png */; };
+		B8A36AB51471D81300E654D1 /* Default@x2.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB31471D81300E654D1 /* Default@x2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		65F77B401469C7E60034CF49 /* WindyPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindyPointViewController.m; sourceTree = "<group>"; };
 		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
+		B8A36AB21471D81300E654D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B8A36AB31471D81300E654D1 /* Default@x2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@x2.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
+				B8A36AB21471D81300E654D1 /* Default.png */,
+				B8A36AB31471D81300E654D1 /* Default@x2.png */,
 				650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */,
 				650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */,
 				650F0B081465EC0900978029 /* MountianMapView.xib */,
