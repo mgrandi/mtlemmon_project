@@ -189,6 +189,8 @@
 				650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */,
 				650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */,
 				65A55D67146F13A000117BBC /* BearCanyonView.xib in Resources */,
+				B8A36AB41471D81300E654D1 /* Default.png in Resources */,
+				B8A36AB51471D81300E654D1 /* Default@x2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
