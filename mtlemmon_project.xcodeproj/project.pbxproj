@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		650F0B091465EC0900978029 /* MountianMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B081465EC0900978029 /* MountianMapView.xib */; };
-		650F0B0D1465EC8C00978029 /* MountianMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountianMapViewController.m */; };
+		650F0B091465EC0900978029 /* MountainMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B081465EC0900978029 /* MountainMapView.xib */; };
+		650F0B0D1465EC8C00978029 /* MountainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountainMapViewController.m */; };
 		650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */; };
 		650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */; };
 		65A55D67146F13A000117BBC /* BearCanyonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A55D66146F13A000117BBC /* BearCanyonView.xib */; };
@@ -24,6 +24,8 @@
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
 		B84AE691147218C600F5D0C7 /* LogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE690147218C600F5D0C7 /* LogoLarge.png */; };
 		B84AE693147218F100F5D0C7 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE692147218F100F5D0C7 /* LogoSmall.png */; };
+		B888EA801475C4990086C127 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888EA7F1475C4990086C127 /* MainMenuViewController.m */; };
+		B888EA831475C5E80086C127 /* MainMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B888EA821475C5E80086C127 /* MainMenuView.xib */; };
 		B8A36AB41471D81300E654D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB21471D81300E654D1 /* Default.png */; };
 		B8A36AB51471D81300E654D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB31471D81300E654D1 /* Default@2x.png */; };
 		B8D1C2941475A92A00C6CDC2 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D1C2921475A92A00C6CDC2 /* fire.png */; };
@@ -31,9 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		650F0B081465EC0900978029 /* MountianMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountianMapView.xib; sourceTree = "<group>"; };
-		650F0B0B1465EC8C00978029 /* MountianMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountianMapViewController.h; sourceTree = "<group>"; };
-		650F0B0C1465EC8C00978029 /* MountianMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountianMapViewController.m; sourceTree = "<group>"; };
+		650F0B081465EC0900978029 /* MountainMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountainMapView.xib; sourceTree = "<group>"; };
+		650F0B0B1465EC8C00978029 /* MountainMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountainMapViewController.h; sourceTree = "<group>"; };
+		650F0B0C1465EC8C00978029 /* MountainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountainMapViewController.m; sourceTree = "<group>"; };
 		650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_Map_Pin_small.png; sourceTree = "<group>"; };
 		650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky_Islands_Trip.png; sourceTree = "<group>"; };
 		65A55D66146F13A000117BBC /* BearCanyonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BearCanyonView.xib; sourceTree = "<group>"; };
@@ -57,6 +59,9 @@
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
 		B84AE690147218C600F5D0C7 /* LogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoLarge.png; path = ../LogoLarge.png; sourceTree = "<group>"; };
 		B84AE692147218F100F5D0C7 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoSmall.png; path = ../LogoSmall.png; sourceTree = "<group>"; };
+		B888EA7E1475C4990086C127 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
+		B888EA7F1475C4990086C127 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
+		B888EA821475C5E80086C127 /* MainMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuView.xib; sourceTree = "<group>"; };
 		B8A36AB21471D81300E654D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B8A36AB31471D81300E654D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B8D1C2921475A92A00C6CDC2 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
@@ -107,16 +112,17 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
-				650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */,
-				650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */,
-				650F0B081465EC0900978029 /* MountianMapView.xib */,
-				650F0B0B1465EC8C00978029 /* MountianMapViewController.h */,
-				650F0B0C1465EC8C00978029 /* MountianMapViewController.m */,
+				650F0B081465EC0900978029 /* MountainMapView.xib */,
+				B888EA821475C5E80086C127 /* MainMenuView.xib */,
+				65A55D66146F13A000117BBC /* BearCanyonView.xib */,
+				650F0B0B1465EC8C00978029 /* MountainMapViewController.h */,
+				650F0B0C1465EC8C00978029 /* MountainMapViewController.m */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
 				65F77B381469C7B90034CF49 /* BearCanyonViewController.h */,
 				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
-				65A55D66146F13A000117BBC /* BearCanyonView.xib */,
+				B888EA7E1475C4990086C127 /* MainMenuViewController.h */,
+				B888EA7F1475C4990086C127 /* MainMenuViewController.m */,
 				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
 				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
 				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
@@ -132,6 +138,8 @@
 		65EDEAAF1465CEB00009AC84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */,
+				650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */,
 				B8D1C2921475A92A00C6CDC2 /* fire.png */,
 				B8D1C2931475A92A00C6CDC2 /* land.png */,
 				B8A36AB21471D81300E654D1 /* Default.png */,
@@ -197,7 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65EDEAB31465CEB00009AC84 /* InfoPlist.strings in Resources */,
-				650F0B091465EC0900978029 /* MountianMapView.xib in Resources */,
+				650F0B091465EC0900978029 /* MountainMapView.xib in Resources */,
 				650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */,
 				650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */,
 				65A55D67146F13A000117BBC /* BearCanyonView.xib in Resources */,
@@ -207,6 +215,7 @@
 				B84AE693147218F100F5D0C7 /* LogoSmall.png in Resources */,
 				B8D1C2941475A92A00C6CDC2 /* fire.png in Resources */,
 				B8D1C2951475A92A00C6CDC2 /* land.png in Resources */,
+				B888EA831475C5E80086C127 /* MainMenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,11 +228,12 @@
 			files = (
 				65EDEAB51465CEB00009AC84 /* main.m in Sources */,
 				65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */,
-				650F0B0D1465EC8C00978029 /* MountianMapViewController.m in Sources */,
+				650F0B0D1465EC8C00978029 /* MountainMapViewController.m in Sources */,
 				65F77B3A1469C7B90034CF49 /* BearCanyonViewController.m in Sources */,
 				65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */,
 				65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */,
 				65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */,
+				B888EA801475C4990086C127 /* MainMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 //
 
 #import "MtlemmonAppDelegate.h"
-#import "MountianMapViewController.h"
+#import "MainMenuViewController.h"
 
 
 /*
@@ -38,17 +38,13 @@
     self.window.backgroundColor = [UIColor whiteColor];
     
     // create the MountianMapViewController and set it as the root view controller
-    MountianMapViewController *mapViewController = [[MountianMapViewController alloc] init ];
+    MainMenuViewController *mainMenuController = [[MainMenuViewController alloc] init ];
         
-    navController = [[UINavigationController alloc] initWithRootViewController:mapViewController];
+    navController = [[UINavigationController alloc] initWithRootViewController:mainMenuController];
         
-    [mapViewController release];
+    [mainMenuController release];
     
     [self.window setRootViewController: navController];
-    
-    
-    
-    
     
     [self.window makeKeyAndVisible];
     return YES;
