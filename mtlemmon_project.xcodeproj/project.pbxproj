@@ -22,6 +22,7 @@
 		65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */; };
 		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
+		B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B812F10F147618B700115AC0 /* MainLogoTrans.png */; };
 		B84AE691147218C600F5D0C7 /* LogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE690147218C600F5D0C7 /* LogoLarge.png */; };
 		B84AE693147218F100F5D0C7 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE692147218F100F5D0C7 /* LogoSmall.png */; };
 		B888EA801475C4990086C127 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888EA7F1475C4990086C127 /* MainMenuViewController.m */; };
@@ -63,6 +64,7 @@
 		65F77B401469C7E60034CF49 /* WindyPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindyPointViewController.m; sourceTree = "<group>"; };
 		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
+		B812F10F147618B700115AC0 /* MainLogoTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogoTrans.png; sourceTree = "<group>"; };
 		B84AE690147218C600F5D0C7 /* LogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoLarge.png; path = ../LogoLarge.png; sourceTree = "<group>"; };
 		B84AE692147218F100F5D0C7 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoSmall.png; path = ../LogoSmall.png; sourceTree = "<group>"; };
 		B888EA7E1475C4990086C127 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		65EDEAAF1465CEB00009AC84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B812F10F147618B700115AC0 /* MainLogoTrans.png */,
 				B888EA921475DC3F0086C127 /* MainLogoW.png */,
 				B888EA901475D9030086C127 /* NSF_Logo.PNG */,
 				B888EA8A1475D6240086C127 /* MainLogo.png */,
@@ -241,6 +244,7 @@
 				B888EA911475D9030086C127 /* NSF_Logo.PNG in Resources */,
 				B888EA931475DC400086C127 /* MainLogoW.png in Resources */,
 				B888EA981475DDD60086C127 /* AboutView.xib in Resources */,
+				B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
