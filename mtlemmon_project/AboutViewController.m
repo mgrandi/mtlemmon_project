@@ -1,16 +1,14 @@
 //
-//  MainMenuViewController.m
+//  AboutViewController.m
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/17/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "MainMenuViewController.h"
-#import "MountainMapViewController.h"
 #import "AboutViewController.h"
 
-@implementation MainMenuViewController
+@implementation AboutViewController
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -46,24 +44,28 @@
         float imgWidth = logoNSF.size.width/10;
         float imgHeight = logoNSF.size.height/10;
         logoNSFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
+        
+        // *********************************************
+        // Create back button for the about page
+        // *********************************************
+        UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonBack addTarget:self 
+                       action:@selector(returnToPrevious:)
+             forControlEvents:UIControlEventTouchDown];
+        [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
+        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 80), 60.0, 35.0);
+        [self.view addSubview:buttonBack];
     }
     return self;
 }
 
-// This method will be called when the "Begin Static Tour" button is pressed
--(IBAction) staticTourPressed:(id)sender {
-    MountainMapViewController *mm = [[MountainMapViewController alloc] init];
-    [[self navigationController] pushViewController:mm animated:YES];
-}
-
-// This method will be called when the "About" button is pressed
--(IBAction) aboutPressed:(id)sender {
-    AboutViewController *ab = [[AboutViewController alloc] init];
-    [[self navigationController] pushViewController:ab animated:YES];
-}
-
 - (void) logoPressed: (id) sender {
     // Do nothing for now.  Maybe we could have a link to the site from the logo?
+}
+
+// Return to previous veiw
+-(IBAction) returnToPrevious: (id) sender {
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) viewWillAppear:(BOOL)animated {

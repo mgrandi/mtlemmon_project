@@ -29,6 +29,9 @@
 		B888EA891475D3FF0086C127 /* rockBg.png in Resources */ = {isa = PBXBuildFile; fileRef = B888EA881475D3FF0086C127 /* rockBg.png */; };
 		B888EA8B1475D6250086C127 /* MainLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B888EA8A1475D6240086C127 /* MainLogo.png */; };
 		B888EA911475D9030086C127 /* NSF_Logo.PNG in Resources */ = {isa = PBXBuildFile; fileRef = B888EA901475D9030086C127 /* NSF_Logo.PNG */; };
+		B888EA931475DC400086C127 /* MainLogoW.png in Resources */ = {isa = PBXBuildFile; fileRef = B888EA921475DC3F0086C127 /* MainLogoW.png */; };
+		B888EA961475DD530086C127 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888EA951475DD530086C127 /* AboutViewController.m */; };
+		B888EA981475DDD60086C127 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B888EA971475DDD50086C127 /* AboutView.xib */; };
 		B8A36AB41471D81300E654D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB21471D81300E654D1 /* Default.png */; };
 		B8A36AB51471D81300E654D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB31471D81300E654D1 /* Default@2x.png */; };
 		B8D1C2941475A92A00C6CDC2 /* fire.png in Resources */ = {isa = PBXBuildFile; fileRef = B8D1C2921475A92A00C6CDC2 /* fire.png */; };
@@ -68,6 +71,10 @@
 		B888EA881475D3FF0086C127 /* rockBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rockBg.png; sourceTree = "<group>"; };
 		B888EA8A1475D6240086C127 /* MainLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogo.png; sourceTree = "<group>"; };
 		B888EA901475D9030086C127 /* NSF_Logo.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NSF_Logo.PNG; sourceTree = "<group>"; };
+		B888EA921475DC3F0086C127 /* MainLogoW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogoW.png; sourceTree = "<group>"; };
+		B888EA941475DD520086C127 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		B888EA951475DD530086C127 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		B888EA971475DDD50086C127 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
 		B8A36AB21471D81300E654D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B8A36AB31471D81300E654D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B8D1C2921475A92A00C6CDC2 /* fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire.png; sourceTree = "<group>"; };
@@ -118,6 +125,7 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
+				B888EA971475DDD50086C127 /* AboutView.xib */,
 				650F0B081465EC0900978029 /* MountainMapView.xib */,
 				B888EA821475C5E80086C127 /* MainMenuView.xib */,
 				65A55D66146F13A000117BBC /* BearCanyonView.xib */,
@@ -126,6 +134,8 @@
 				650F0B0B1465EC8C00978029 /* MountainMapViewController.h */,
 				650F0B0C1465EC8C00978029 /* MountainMapViewController.m */,
 				65F77B381469C7B90034CF49 /* BearCanyonViewController.h */,
+				B888EA941475DD520086C127 /* AboutViewController.h */,
+				B888EA951475DD530086C127 /* AboutViewController.m */,
 				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
 				B888EA7E1475C4990086C127 /* MainMenuViewController.h */,
 				B888EA7F1475C4990086C127 /* MainMenuViewController.m */,
@@ -144,6 +154,7 @@
 		65EDEAAF1465CEB00009AC84 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B888EA921475DC3F0086C127 /* MainLogoW.png */,
 				B888EA901475D9030086C127 /* NSF_Logo.PNG */,
 				B888EA8A1475D6240086C127 /* MainLogo.png */,
 				B888EA881475D3FF0086C127 /* rockBg.png */,
@@ -228,6 +239,8 @@
 				B888EA891475D3FF0086C127 /* rockBg.png in Resources */,
 				B888EA8B1475D6250086C127 /* MainLogo.png in Resources */,
 				B888EA911475D9030086C127 /* NSF_Logo.PNG in Resources */,
+				B888EA931475DC400086C127 /* MainLogoW.png in Resources */,
+				B888EA981475DDD60086C127 /* AboutView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +259,7 @@
 				65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */,
 				65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */,
 				B888EA801475C4990086C127 /* MainMenuViewController.m in Sources */,
+				B888EA961475DD530086C127 /* AboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

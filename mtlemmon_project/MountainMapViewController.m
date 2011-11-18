@@ -139,6 +139,12 @@
     [[self navigationController] pushViewController:mc animated:YES];
 }
 
+// Return to previous veiw
+-(IBAction) returnToPrevious: (id) sender {
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
@@ -175,10 +181,6 @@
 {
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
--(IBAction) returnToPrevious: (id) sender {
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(void) viewWillAppear:(BOOL)animated {
