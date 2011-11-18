@@ -16,16 +16,16 @@
     if (self) {
         
         // *********************************************
-        // Create back button for the about page
+        // Create fire button
         // *********************************************
-        UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [buttonBack addTarget:self 
+        UIButton *buttonFire = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonFire addTarget:self 
                        action:@selector(returnToPrevious:)
              forControlEvents:UIControlEventTouchDown];
-        [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
-        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 80), 60.0, 35.0);
-        [self.view addSubview:buttonBack];
-    }
+        [buttonFire setTitle:@"Fire" forState:UIControlStateNormal];
+        buttonFire.frame = CGRectMake( 3 , 75, [UIScreen mainScreen].bounds.size.width - 6, 35.0);
+        [self.view addSubview:buttonFire];   }
+    
     return self;
 }
 
