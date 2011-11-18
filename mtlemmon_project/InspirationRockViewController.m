@@ -14,17 +14,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-        // *********************************************
-        // Create fire button
-        // *********************************************
-        UIButton *buttonFire = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [buttonFire addTarget:self 
-                       action:@selector(returnToPrevious:)
-             forControlEvents:UIControlEventTouchDown];
-        [buttonFire setTitle:@"Fire" forState:UIControlStateNormal];
-        buttonFire.frame = CGRectMake( 3 , 75, [UIScreen mainScreen].bounds.size.width - 6, 35.0);
-        [self.view addSubview:buttonFire];   }
+        //...
+    }
     
     return self;
 }

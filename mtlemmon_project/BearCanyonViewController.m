@@ -16,37 +16,21 @@
     if (self) {
         
         // **************
-        // Create FIRE button
+        // Fire button
         // ***************
-        // create the UIImage that is thebutton
-        UIImage *fireImage = [UIImage imageNamed:@"fire.png"];
-        
+        UIImage *fire = [UIImage imageNamed:@"fireButton.PNG"];
         UIButton *fireButton = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        [fireButton setImage:fireImage forState:UIControlStateNormal];
+        [fireButton setImage:fire forState:UIControlStateNormal];
         [fireButton addTarget:self action:@selector(firePressed:) forControlEvents:UIControlEventTouchUpInside];
         
         // add the button as a subview to the main imageview
-        [self.view addSubview:fireButton];
+        [self.view addSubview: fireButton];
+        float imgWidth = fire.size.width/10;
+        float imgHeight = fire.size.height/10;
+        fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-3, 50);
         
-        fireButton.frame = CGRectMake( ([UIScreen mainScreen].bounds.size.width/2) - (fireImage.size.width/2), 60, fireImage.size.width, fireImage.size.height);
         
-        // **************
-        // Create land button
-        // ***************
-        // create the UIImage that is thebutton
-        UIImage *landImage = [UIImage imageNamed:@"land.png"];
-        
-        UIButton *landButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [landButton setImage:landImage forState:UIControlStateNormal];
-        [landButton addTarget:self action:@selector(landPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // add the button as a subview to the main imageview
-        [self.view addSubview:landButton];
-        
-        landButton.frame = CGRectMake( ([UIScreen mainScreen].bounds.size.width/2) - (landImage.size.width/2), 230, landImage.size.width, landImage.size.height);
-
     }
     return self;
 }
