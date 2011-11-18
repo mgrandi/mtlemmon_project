@@ -15,4 +15,6 @@
  */
 @interface MainMenuViewController : UIViewController
 
+-(IBAction) staticTourPressed:(id)sender;
+
 @end

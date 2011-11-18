@@ -18,8 +18,6 @@
  This is what gets called when the application first opens.
  Eventually it will be the map where you can select what stop you 
  want to go to.
- 
- 
  */
 @implementation MountainMapViewController
 
@@ -102,6 +100,9 @@
         
         pinViewMolino.frame = CGRectMake(230, 303, molinoPin.size.width, molinoPin.size.height);
         
+        // *********************************************
+        // Create back button for static map view
+        // *********************************************
         UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBack addTarget:self 
                    action:@selector(returnToPrevious:)
