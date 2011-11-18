@@ -17,6 +17,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         // **************
         // Flandrau Logo
         // ***************
@@ -30,7 +31,7 @@
         // add the button as a subview to the main imageview
         [self.view addSubview:logoButton];
         logoButton.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logo.size.height/2 );
-        
+         
         // **************
         // NSF Logo
         // ***************
