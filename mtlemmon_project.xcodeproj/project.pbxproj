@@ -23,7 +23,6 @@
 		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
 		B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B812F10F147618B700115AC0 /* MainLogoTrans.png */; };
-		B82979EE14771DC30015ADC7 /* MolinoCanyonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82979ED14771DC30015ADC7 /* MolinoCanyonView.xib */; };
 		B82979F01477200A0015ADC7 /* fireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B82979EF1477200A0015ADC7 /* fireButton.png */; };
 		B84AE691147218C600F5D0C7 /* LogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE690147218C600F5D0C7 /* LogoLarge.png */; };
 		B84AE693147218F100F5D0C7 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE692147218F100F5D0C7 /* LogoSmall.png */; };
@@ -67,7 +66,6 @@
 		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
 		B812F10F147618B700115AC0 /* MainLogoTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogoTrans.png; sourceTree = "<group>"; };
-		B82979ED14771DC30015ADC7 /* MolinoCanyonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MolinoCanyonView.xib; sourceTree = "<group>"; };
 		B82979EF1477200A0015ADC7 /* fireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireButton.png; sourceTree = "<group>"; };
 		B84AE690147218C600F5D0C7 /* LogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoLarge.png; path = ../LogoLarge.png; sourceTree = "<group>"; };
 		B84AE692147218F100F5D0C7 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoSmall.png; path = ../LogoSmall.png; sourceTree = "<group>"; };
@@ -134,7 +132,6 @@
 				B888EA971475DDD50086C127 /* AboutView.xib */,
 				650F0B081465EC0900978029 /* MountainMapView.xib */,
 				B888EA821475C5E80086C127 /* MainMenuView.xib */,
-				B82979ED14771DC30015ADC7 /* MolinoCanyonView.xib */,
 				65A55D66146F13A000117BBC /* BearCanyonView.xib */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
@@ -251,7 +248,6 @@
 				B888EA931475DC400086C127 /* MainLogoW.png in Resources */,
 				B888EA981475DDD60086C127 /* AboutView.xib in Resources */,
 				B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */,
-				B82979EE14771DC30015ADC7 /* MolinoCanyonView.xib in Resources */,
 				B82979F01477200A0015ADC7 /* fireButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
