@@ -7,6 +7,7 @@
 //
 
 #import "BearCanyonViewController.h"
+#import "BCFireScrollViewController.h"
 
 @implementation BearCanyonViewController
 
@@ -26,10 +27,7 @@
         
         // add the button as a subview to the main imageview
         [self.view addSubview: fireButton];
-        float imgWidth = fire.size.width/10;
-        float imgHeight = fire.size.height/10;
         fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-6, 65);
-        
         
     }
     return self;
@@ -49,30 +47,14 @@
 
 // Do this action if the FIRE button is pressed
 -(void) firePressed: (id) sender {
-    // Do something here
+    BCFireScrollViewController *bcf = [[BCFireScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bcf animated:YES];
 }
 
 // Do this action if the LAND button is pressed
 -(void) landPressed: (id) sender {
     // Do something here
 }
-
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
 
 - (void)viewDidUnload
 {
