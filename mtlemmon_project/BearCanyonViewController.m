@@ -28,7 +28,7 @@
         [self.view addSubview: fireButton];
         float imgWidth = fire.size.width/10;
         float imgHeight = fire.size.height/10;
-        fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-3, 50);
+        fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-6, 65);
         
         
     }
