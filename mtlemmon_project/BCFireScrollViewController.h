@@ -10,11 +10,12 @@
 
 @interface BCFireScrollViewController : UIViewController {
     UIScrollView* scrollView;
-    UIPageControl* pageSwipeController;
+    UIPageControl* pageControl;
 }
 
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
-@property (nonatomic, retain) IBOutlet UIPageControl* pageSwipeController;
+@property (nonatomic, retain) IBOutlet UIPageControl* pageControl;
 
+- (IBAction)changePage;
 
 @end

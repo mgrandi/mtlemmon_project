@@ -11,12 +11,12 @@
 @implementation BCFireScrollViewController
 
 @synthesize scrollView;
-@synthesize pageSwipeController;
+@synthesize pageControl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [scrollView setDelegate:(id<UIScrollViewDelegate>)self];
+    //[scrollView setDelegate:(id<UIScrollViewDelegate>)self];
     
     NSArray *colors = [NSArray arrayWithObjects:[UIColor redColor], [UIColor greenColor], [UIColor blueColor], nil];
     for (int i = 0; i < colors.count; i++) {
@@ -47,10 +47,23 @@
 
 // For when the user swipes to the next page, the dots on the bottom of the screen will update
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
+    [pageControl setNeedsDisplay];
     // Update the page when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.scrollView.frame.size.width;
     int page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    self.pageSwipeController.currentPage = page;
+    self.pageControl.currentPage = page;
+    NSLog(@"calllled");
+}
+
+- (IBAction)changePage {
+    // update the scroll view to the appropriate page
+    CGRect frame;
+    frame.origin.x = self.scrollView.frame.size.width * self.pageControl.currentPage;
+    frame.origin.y = 0;
+    frame.size = self.scrollView.frame.size;
+    [self.scrollView scrollRectToVisible:frame animated:YES];
+    
+    NSLog(@"calllled222");
 }
 
 - (void)dealloc {
