@@ -24,7 +24,7 @@
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
 		B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B812F10F147618B700115AC0 /* MainLogoTrans.png */; };
 		B818A8FC147B609500F09A2C /* BCFireScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */; };
-		B818A900147B642E00F09A2C /* BCFireScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B818A8FF147B642E00F09A2C /* BCFireScrollView.xib */; };
+		B82557EA147C52F200F62CB1 /* BCFireScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82557E9147C52F200F62CB1 /* BCFireScrollView.xib */; };
 		B82979F01477200A0015ADC7 /* fireButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B82979EF1477200A0015ADC7 /* fireButton.png */; };
 		B84AE691147218C600F5D0C7 /* LogoLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE690147218C600F5D0C7 /* LogoLarge.png */; };
 		B84AE693147218F100F5D0C7 /* LogoSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = B84AE692147218F100F5D0C7 /* LogoSmall.png */; };
@@ -70,7 +70,7 @@
 		B812F10F147618B700115AC0 /* MainLogoTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogoTrans.png; sourceTree = "<group>"; };
 		B818A8FA147B609500F09A2C /* BCFireScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFireScrollViewController.h; sourceTree = "<group>"; };
 		B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFireScrollViewController.m; sourceTree = "<group>"; };
-		B818A8FF147B642E00F09A2C /* BCFireScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BCFireScrollView.xib; path = ../BCFireScrollView.xib; sourceTree = "<group>"; };
+		B82557E9147C52F200F62CB1 /* BCFireScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BCFireScrollView.xib; sourceTree = "<group>"; };
 		B82979EF1477200A0015ADC7 /* fireButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fireButton.png; sourceTree = "<group>"; };
 		B84AE690147218C600F5D0C7 /* LogoLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoLarge.png; path = ../LogoLarge.png; sourceTree = "<group>"; };
 		B84AE692147218F100F5D0C7 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoSmall.png; path = ../LogoSmall.png; sourceTree = "<group>"; };
@@ -185,7 +185,7 @@
 				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
 				B818A8FA147B609500F09A2C /* BCFireScrollViewController.h */,
 				B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */,
-				B818A8FF147B642E00F09A2C /* BCFireScrollView.xib */,
+				B82557E9147C52F200F62CB1 /* BCFireScrollView.xib */,
 				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
 				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
 				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
@@ -265,7 +265,7 @@
 				B888EA981475DDD60086C127 /* AboutView.xib in Resources */,
 				B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */,
 				B82979F01477200A0015ADC7 /* fireButton.png in Resources */,
-				B818A900147B642E00F09A2C /* BCFireScrollView.xib in Resources */,
+				B82557EA147C52F200F62CB1 /* BCFireScrollView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

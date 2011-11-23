@@ -11,11 +11,13 @@
 @interface BCFireScrollViewController : UIViewController {
     UIScrollView* scrollView;
     UIPageControl* pageControl;
+    
 }
+
+- (void)scrollViewDidScroll:(UIScrollView *)sender;
 
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl* pageControl;
-
-- (IBAction)changePage;
+@property (assign) id<UIScrollViewDelegate> delegate;
 
 @end
