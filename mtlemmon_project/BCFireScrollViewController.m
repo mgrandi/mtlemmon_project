@@ -3,7 +3,6 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/21/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import "BCFireScrollViewController.h"

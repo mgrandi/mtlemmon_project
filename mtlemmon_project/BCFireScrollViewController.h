@@ -11,7 +11,6 @@
 @interface BCFireScrollViewController : UIViewController {
     UIScrollView* scrollView;
     UIPageControl* pageControl;
-    
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender;
