@@ -183,7 +183,7 @@
 			children = (
 				65F77B381469C7B90034CF49 /* BearCanyonViewController.h */,
 				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
-				B8BB4D21147CB8520068D700 /* New Group */,
+				B8BB4D21147CB8520068D700 /* BC */,
 				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
 				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
 				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
@@ -194,14 +194,14 @@
 			name = TourStopViewControllers;
 			sourceTree = "<group>";
 		};
-		B8BB4D21147CB8520068D700 /* New Group */ = {
+		B8BB4D21147CB8520068D700 /* BC */ = {
 			isa = PBXGroup;
 			children = (
 				B818A8FA147B609500F09A2C /* BCFireScrollViewController.h */,
 				B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */,
 				B82557E9147C52F200F62CB1 /* BCFireScrollView.xib */,
 			);
-			name = "New Group";
+			name = BC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
