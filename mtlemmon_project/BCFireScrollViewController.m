@@ -31,8 +31,14 @@
         subview.backgroundColor = color;
         [self.scrollView addSubview:subview];
         
+        UIImage *bg = [UIImage imageNamed:@"background_1.png"];
+        UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
+        // add the button as a subview to the main imageview
+        [subview addSubview: bgv];
+        
         UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 100)];
         myLabel.text =[text objectAtIndex:i];
+        myLabel.textColor = [UIColor whiteColor];
         myLabel.backgroundColor = [UIColor clearColor]; // [UIColor brownColor];
         [subview addSubview:myLabel];
         

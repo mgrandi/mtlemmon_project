@@ -16,6 +16,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
+        UIImage *bg = [UIImage imageNamed:@"background_1.png"];
+        UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
+        
+        // add the button as a subview to the main imageview
+        [self.view addSubview: bgv];
+        
         // **************
         // Fire button
         // ***************
