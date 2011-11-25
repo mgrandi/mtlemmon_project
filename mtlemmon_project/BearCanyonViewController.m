@@ -8,6 +8,7 @@
 
 #import "BearCanyonViewController.h"
 #import "BCFireScrollViewController.h"
+#import "BCLifeZonesScrollViewController.h"
 
 @implementation BearCanyonViewController
 
@@ -18,23 +19,44 @@
         
         UIImage *bg = [UIImage imageNamed:@"background_1.png"];
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
-        
-        // add the button as a subview to the main imageview
         [self.view addSubview: bgv];
         
-        // **************
-        // Fire button
-        // ***************
-        UIImage *fire = [UIImage imageNamed:@"fireButton.PNG"];
-        UIButton *fireButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        // *********************************************
+        // CreateWelcome Text
+        // *********************************************
+        UILabel *welcome = [[UILabel alloc] init ];
+        welcome.numberOfLines = 0; // Allows for infinite number of lines
+        welcome.lineBreakMode = UILineBreakModeWordWrap;
+        [welcome setText: @"Welcome to Bear Canyon! \nWhat would you like to learn about?"];
+        welcome.backgroundColor = [UIColor clearColor];
+        welcome.textColor = [UIColor whiteColor];
+        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 50.0);
+        [self.view addSubview: welcome];
         
-        [fireButton setImage:fire forState:UIControlStateNormal];
-        [fireButton addTarget:self action:@selector(firePressed:) forControlEvents:UIControlEventTouchUpInside];
+ 
+        // *********************************************
+        // Create Fire Button
+        // *********************************************
+        UIButton *buttonFire = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonFire addTarget:self 
+                       action:@selector(firePressed:)
+             forControlEvents:UIControlEventTouchDown];
+        [buttonFire setTitle:@"Fire" forState:UIControlStateNormal];
+        [buttonFire setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+        buttonFire.frame = CGRectMake(20.0, 95.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonFire];
         
-        // add the button as a subview to the main imageview
-        [self.view addSubview: fireButton];
-        fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-6, 65);
-        
+        // *********************************************
+        // Create Life Zones Button
+        // *********************************************
+        UIButton *buttonLZ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonLZ addTarget:self 
+                       action:@selector(lZPressed:)
+             forControlEvents:UIControlEventTouchDown];
+        [buttonLZ setTitle:@"Life Zones" forState:UIControlStateNormal];
+        [buttonLZ setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+        buttonLZ.frame = CGRectMake(20.0, 150.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonLZ];
     }
     return self;
 }
@@ -43,8 +65,6 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 -(void) viewDidAppear:(BOOL)animated {
@@ -57,9 +77,10 @@
     [[self navigationController] pushViewController:bcf animated:YES];
 }
 
-// Do this action if the LAND button is pressed
--(void) landPressed: (id) sender {
-    // Do something here
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bclz animated:YES];
 }
 
 - (void)viewDidUnload

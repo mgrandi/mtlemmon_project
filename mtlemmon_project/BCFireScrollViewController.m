@@ -39,7 +39,7 @@
         UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 100)];
         myLabel.text =[text objectAtIndex:i];
         myLabel.textColor = [UIColor whiteColor];
-        myLabel.backgroundColor = [UIColor clearColor]; // [UIColor brownColor];
+        myLabel.backgroundColor = [UIColor clearColor];
         [subview addSubview:myLabel];
         
         // release the items
