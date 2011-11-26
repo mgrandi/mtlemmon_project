@@ -7,6 +7,7 @@
 //
 
 #import "BearCanyonViewController.h"
+
 #import "BCFireScrollViewController.h"
 #import "BCLifeZonesScrollViewController.h"
 
@@ -22,7 +23,7 @@
         [self.view addSubview: bgv];
         
         // *********************************************
-        // CreateWelcome Text
+        // Create Welcome Text
         // *********************************************
         UILabel *welcome = [[UILabel alloc] init ];
         welcome.numberOfLines = 0; // Allows for infinite number of lines
@@ -33,7 +34,6 @@
         welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 50.0);
         [self.view addSubview: welcome];
         
- 
         // *********************************************
         // Create Fire Button
         // *********************************************

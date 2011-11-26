@@ -7,6 +7,7 @@
 //
 
 #import "WindyPointViewController.h"
+
 #import "WPLifeZonesScrollViewController.h"
 #import "WPGeologyScrollViewController.h"
 #import "WPBasinScrollViewController.h"
@@ -40,7 +41,7 @@
         // *********************************************
         UIButton *buttonLZ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonLZ addTarget:self 
-                       action:@selector(firePressed:)
+                       action:@selector(lZPressed:)
              forControlEvents:UIControlEventTouchDown];
         [buttonLZ setTitle:@"Life Zones" forState:UIControlStateNormal];
         [buttonLZ setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
@@ -52,7 +53,7 @@
         // *********************************************
         UIButton *buttonBH = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBH addTarget:self 
-                     action:@selector(BHPressed:)
+                     action:@selector(bHPressed:)
            forControlEvents:UIControlEventTouchDown];
         [buttonBH setTitle:@"Basin History" forState:UIControlStateNormal];
         [buttonBH setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
@@ -63,8 +64,8 @@
         // Create Geology Button
         // *********************************************
         UIButton *buttonGeo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [buttonBH addTarget:self 
-                     action:@selector(GeoPressed:)
+        [buttonGeo addTarget:self 
+                     action:@selector(geoPressed:)
            forControlEvents:UIControlEventTouchDown];
         [buttonGeo setTitle:@"Geology" forState:UIControlStateNormal];
         [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -80,16 +81,16 @@
     [[self navigationController] pushViewController:wplz animated:YES];
 }
 
-// Do this action if the GEOLOGY button is pressed
--(void) GeoPressed: (id) sender {
-    WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
-    [[self navigationController] pushViewController:wpGeo animated:YES];
-}
-
 // Do this action if the BASIN HISTORY button is pressed
--(void) BHPressed: (id) sender {
+-(void) bHPressed: (id) sender {
     WPBasinScrollViewController *wpBas = [[WPBasinScrollViewController alloc] init];
     [[self navigationController] pushViewController:wpBas animated:YES];
+}
+
+// Do this action if the GEOLOGY button is pressed
+-(void) geoPressed: (id) sender {
+    WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wpGeo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
