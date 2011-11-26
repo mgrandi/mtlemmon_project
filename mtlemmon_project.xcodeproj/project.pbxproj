@@ -21,6 +21,8 @@
 		65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */; };
 		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
+		B80980DE1481613E00A969A3 /* WPGeologyScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80980DD1481613E00A969A3 /* WPGeologyScrollViewController.m */; };
+		B80980E1148161BF00A969A3 /* WPBasinScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80980E0148161BF00A969A3 /* WPBasinScrollViewController.m */; };
 		B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B812F10F147618B700115AC0 /* MainLogoTrans.png */; };
 		B818A8FC147B609500F09A2C /* BCFireScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */; };
 		B82557EA147C52F200F62CB1 /* BCFireScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B82557E9147C52F200F62CB1 /* BCFireScrollView.xib */; };
@@ -68,6 +70,10 @@
 		65F77B401469C7E60034CF49 /* WindyPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindyPointViewController.m; sourceTree = "<group>"; };
 		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
+		B80980DC1481613E00A969A3 /* WPGeologyScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPGeologyScrollViewController.h; sourceTree = "<group>"; };
+		B80980DD1481613E00A969A3 /* WPGeologyScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPGeologyScrollViewController.m; sourceTree = "<group>"; };
+		B80980DF148161BF00A969A3 /* WPBasinScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBasinScrollViewController.h; sourceTree = "<group>"; };
+		B80980E0148161BF00A969A3 /* WPBasinScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPBasinScrollViewController.m; sourceTree = "<group>"; };
 		B812F10F147618B700115AC0 /* MainLogoTrans.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainLogoTrans.png; sourceTree = "<group>"; };
 		B818A8FA147B609500F09A2C /* BCFireScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCFireScrollViewController.h; sourceTree = "<group>"; };
 		B818A8FB147B609500F09A2C /* BCFireScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCFireScrollViewController.m; sourceTree = "<group>"; };
@@ -78,7 +84,7 @@
 		B84AE692147218F100F5D0C7 /* LogoSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LogoSmall.png; path = ../LogoSmall.png; sourceTree = "<group>"; };
 		B8750B8314804C3B00FC0C6B /* BCLifeZonesScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLifeZonesScrollViewController.h; sourceTree = "<group>"; };
 		B8750B8414804C3C00FC0C6B /* BCLifeZonesScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLifeZonesScrollViewController.m; sourceTree = "<group>"; };
-		B8750B8714804E9300FC0C6B /* WPLifeZonesScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; path = WPLifeZonesScrollViewController.h; sourceTree = "<group>"; };
+		B8750B8714804E9300FC0C6B /* WPLifeZonesScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPLifeZonesScrollViewController.h; sourceTree = "<group>"; };
 		B8750B8814804E9300FC0C6B /* WPLifeZonesScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPLifeZonesScrollViewController.m; sourceTree = "<group>"; };
 		B888EA7E1475C4990086C127 /* MainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMenuViewController.h; sourceTree = "<group>"; };
 		B888EA7F1475C4990086C127 /* MainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
@@ -206,6 +212,10 @@
 			children = (
 				B8750B8714804E9300FC0C6B /* WPLifeZonesScrollViewController.h */,
 				B8750B8814804E9300FC0C6B /* WPLifeZonesScrollViewController.m */,
+				B80980DF148161BF00A969A3 /* WPBasinScrollViewController.h */,
+				B80980E0148161BF00A969A3 /* WPBasinScrollViewController.m */,
+				B80980DC1481613E00A969A3 /* WPGeologyScrollViewController.h */,
+				B80980DD1481613E00A969A3 /* WPGeologyScrollViewController.m */,
 			);
 			name = WP;
 			sourceTree = "<group>";
@@ -314,6 +324,8 @@
 				B818A8FC147B609500F09A2C /* BCFireScrollViewController.m in Sources */,
 				B8750B8514804C3C00FC0C6B /* BCLifeZonesScrollViewController.m in Sources */,
 				B8750B8914804E9300FC0C6B /* WPLifeZonesScrollViewController.m in Sources */,
+				B80980DE1481613E00A969A3 /* WPGeologyScrollViewController.m in Sources */,
+				B80980E1148161BF00A969A3 /* WPBasinScrollViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

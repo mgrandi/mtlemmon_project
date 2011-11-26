@@ -7,6 +7,9 @@
 //
 
 #import "WindyPointViewController.h"
+#import "WPLifeZonesScrollViewController.h"
+#import "WPGeologyScrollViewController.h"
+#import "WPBasinScrollViewController.h"
 
 @implementation WindyPointViewController
 
@@ -49,7 +52,7 @@
         // *********************************************
         UIButton *buttonBH = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBH addTarget:self 
-                     action:@selector(lZPressed:)
+                     action:@selector(BHPressed:)
            forControlEvents:UIControlEventTouchDown];
         [buttonBH setTitle:@"Basin History" forState:UIControlStateNormal];
         [buttonBH setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
@@ -61,7 +64,7 @@
         // *********************************************
         UIButton *buttonGeo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBH addTarget:self 
-                     action:@selector(lZPressed:)
+                     action:@selector(GeoPressed:)
            forControlEvents:UIControlEventTouchDown];
         [buttonGeo setTitle:@"Geology" forState:UIControlStateNormal];
         [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
@@ -73,22 +76,21 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    WPLifeZonesScrollViewController *bclz = [[WPLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bclz animated:YES];
+    WPLifeZonesScrollViewController *wplz = [[WPLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wplz animated:YES];
 }
 
-// Do this action if the LIFE ZONES button is pressed
--(void) lZPressed: (id) sender {
-    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bclz animated:YES];
+// Do this action if the GEOLOGY button is pressed
+-(void) GeoPressed: (id) sender {
+    WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wpGeo animated:YES];
 }
 
-// Do this action if the LIFE ZONES button is pressed
--(void) lZPressed: (id) sender {
-    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bclz animated:YES];
+// Do this action if the BASIN HISTORY button is pressed
+-(void) BHPressed: (id) sender {
+    WPBasinScrollViewController *wpBas = [[WPBasinScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wpBas animated:YES];
 }
-
 
 - (void)didReceiveMemoryWarning
 {

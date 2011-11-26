@@ -1,5 +1,5 @@
 //
-//  WPLifeZonesScrollView.h
+//  WPLifeZonesScrollViewController.h
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/25/11.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface WPLifeZonesScrollView : UIViewController
+@interface WPLifeZonesScrollViewController : UIViewController
 
 @end
