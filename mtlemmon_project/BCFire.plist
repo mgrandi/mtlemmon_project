@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BCFire0</key>
+	<string>This is the first page of information about fire.  Fire is really cool because it can burn things.  Burning things is fun :)</string>
+	<key>BCFire1</key>
+	<string>Now the second page</string>
+	<key>BCFire2</key>
+	<string>Finally, page number 3 (testing)</string>
+	<key>BCFire3</key>
+	<string></string>
+	<key>BCFire4</key>
+	<string></string>
+</dict>
+</plist>

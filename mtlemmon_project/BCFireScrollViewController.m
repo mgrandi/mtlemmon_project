@@ -19,7 +19,7 @@
     
     UIColor *color = [[UIColor alloc] initWithRed:90.0/100.0 green:85.0/100.0 blue:80.0/100.0 alpha:1.0];
     NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", nil];
-    NSArray *views = [NSArray arrayWithObjects: nil, nil, nil, nil];
+    pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
         CGRect frame;
@@ -36,11 +36,21 @@
         // add the button as a subview to the main imageview
         [subview addSubview: bgv];
         
-        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 100)];
-        myLabel.text =[text objectAtIndex:i];
+        ///////////////////////////////////////////////////////////////////
+        
+        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 200, 300)];
+        
+        myLabel.numberOfLines = 0; // Allows for infinite number of lines
+        myLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
+        [pll setAndScanFile: @"BCFire"];
+        myLabel.text = [pll getStringAtIndex: i];
+        
         myLabel.textColor = [UIColor whiteColor];
         myLabel.backgroundColor = [UIColor clearColor];
         [subview addSubview:myLabel];
+        
+        ///////////////////////////////////////////////////////////////////
         
         // release the items
         [myLabel release];
