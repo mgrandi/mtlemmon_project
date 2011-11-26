@@ -45,7 +45,7 @@
         [self.view addSubview:buttonLZ];
         
         // *********************************************
-        // Create Basn History Button
+        // Create Basin History Button
         // *********************************************
         UIButton *buttonBH = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBH addTarget:self 
@@ -70,6 +70,25 @@
     }
     return self;
 }
+
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    WPLifeZonesScrollViewController *bclz = [[WPLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bclz animated:YES];
+}
+
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bclz animated:YES];
+}
+
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bclz animated:YES];
+}
+
 
 - (void)didReceiveMemoryWarning
 {
