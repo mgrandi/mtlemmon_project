@@ -38,7 +38,7 @@
         
         ///////////////////////////////////////////////////////////////////
         
-        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 200, 300)];
+        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, ([UIScreen mainScreen].bounds.size.width - 20), ([UIScreen mainScreen].bounds.size.height - 20) )];
         
         myLabel.numberOfLines = 0; // Allows for infinite number of lines
         myLabel.lineBreakMode = UILineBreakModeWordWrap;
