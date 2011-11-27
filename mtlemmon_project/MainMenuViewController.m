@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "MountainMapViewController.h"
+#import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
 @implementation MainMenuViewController
@@ -55,6 +56,12 @@
 -(IBAction) staticTourPressed:(id)sender {
     MountainMapViewController *mm = [[MountainMapViewController alloc] init];
     [[self navigationController] pushViewController:mm animated:YES];
+}
+
+// This method will be called when the "Begin GPS Tour" button is pressed
+-(IBAction) GPSTourPressed:(id)sender {
+    MountainGPSViewController *mGPS = [[MountainGPSViewController alloc] init];
+    [[self navigationController] pushViewController:mGPS animated:YES];
 }
 
 // This method will be called when the "About" button is pressed
