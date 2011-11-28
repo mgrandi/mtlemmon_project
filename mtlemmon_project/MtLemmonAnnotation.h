@@ -25,4 +25,10 @@
 @property (nonatomic, copy) NSString *title;
 #endif
 
+#if __IPHONE_OS_VERSION_MAX_ALLOWED < __IPHONE_5_0
+@property (nonatomic, retain) NSString *subtitle;
+#else
+@property (nonatomic, copy) NSString *subtitle;
+#endif
+
 @end
