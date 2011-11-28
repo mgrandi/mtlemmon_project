@@ -43,6 +43,7 @@
 		B888EA931475DC400086C127 /* MainLogoW.png in Resources */ = {isa = PBXBuildFile; fileRef = B888EA921475DC3F0086C127 /* MainLogoW.png */; };
 		B888EA961475DD530086C127 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B888EA951475DD530086C127 /* AboutViewController.m */; };
 		B888EA981475DDD60086C127 /* AboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B888EA971475DDD50086C127 /* AboutView.xib */; };
+		B8A2758414832EDF0044B9A0 /* MtLemmonAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = B8A2758314832EDF0044B9A0 /* MtLemmonAnnotation.m */; };
 		B8A36AB41471D81300E654D1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB21471D81300E654D1 /* Default.png */; };
 		B8A36AB51471D81300E654D1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B8A36AB31471D81300E654D1 /* Default@2x.png */; };
 		B8D5886F14819E2B000B3164 /* BCFire.plist in Resources */ = {isa = PBXBuildFile; fileRef = B8D5886E14819E2B000B3164 /* BCFire.plist */; };
@@ -103,6 +104,8 @@
 		B888EA941475DD520086C127 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
 		B888EA951475DD530086C127 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
 		B888EA971475DDD50086C127 /* AboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutView.xib; sourceTree = "<group>"; };
+		B8A2758214832EDF0044B9A0 /* MtLemmonAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MtLemmonAnnotation.h; sourceTree = "<group>"; };
+		B8A2758314832EDF0044B9A0 /* MtLemmonAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MtLemmonAnnotation.m; sourceTree = "<group>"; };
 		B8A36AB21471D81300E654D1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		B8A36AB31471D81300E654D1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		B8D5886E14819E2B000B3164 /* BCFire.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = BCFire.plist; sourceTree = "<group>"; };
@@ -161,6 +164,8 @@
 				B888EA821475C5E80086C127 /* MainMenuView.xib */,
 				B87E58841482E13400E9593E /* MountainGPSViewController.h */,
 				B87E58851482E13400E9593E /* MountainGPSViewController.m */,
+				B8A2758214832EDF0044B9A0 /* MtLemmonAnnotation.h */,
+				B8A2758314832EDF0044B9A0 /* MtLemmonAnnotation.m */,
 				650F0B0B1465EC8C00978029 /* MountainMapViewController.h */,
 				650F0B0C1465EC8C00978029 /* MountainMapViewController.m */,
 				B888EA941475DD520086C127 /* AboutViewController.h */,
@@ -354,6 +359,7 @@
 				B80980E1148161BF00A969A3 /* WPBasinScrollViewController.m in Sources */,
 				B823F0AB148198BA0018A32D /* PListLoader.m in Sources */,
 				B87E58861482E13500E9593E /* MountainGPSViewController.m in Sources */,
+				B8A2758414832EDF0044B9A0 /* MtLemmonAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,12 +7,11 @@
 //
 
 #import "MountainGPSViewController.h"
+#import "MtLemmonAnnotation.h"
 
 @implementation MountainGPSViewController
 
-@synthesize tableview;
 @synthesize mapView;
-@synthesize shadowImage;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,8 +34,17 @@
         region.span.longitudeDelta = 0.0;
         mapView.region = region;
         self.mapView.mapType = MKMapTypeHybrid;
-        
         [self.view addSubview: mapView];
+        
+        // Add the annotations for each stop along the Tour
+        // THIS IS JUST A TEST ANNOTATION FOR NOW !!!!
+        CLLocationCoordinate2D stop1Loc;
+        stop1Loc.latitude = 32.35386297889634;
+        stop1Loc.longitude = -110.73051452636719;
+        MtLemmonAnnotation *loc1Annotation = [[MtLemmonAnnotation alloc]initWithCoordinate:stop1Loc];
+        loc1Annotation.title = @"Test Annotation";
+        [mapView addAnnotation: loc1Annotation];
+        [loc1Annotation release];
         
         // *********************************************
         // Create back button for static map view

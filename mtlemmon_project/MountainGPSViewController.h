@@ -11,15 +11,13 @@
 #import <MapKit/MapKit.h>
 #import <MapKit/MKAnnotation.h>
 
-@interface MountainGPSViewController : UIViewController 
+@interface MountainGPSViewController : UIViewController <MKAnnotation>
 {
-	IBOutlet UITableView *tableview;
 	IBOutlet MKMapView *mapView;
-	IBOutlet UIImageView *shadowImage;
 }
 
-@property (nonatomic, retain) IBOutlet UITableView *tableview;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
-@property (nonatomic, retain) IBOutlet UIImageView *shadowImage;
+
+
 
 @end
