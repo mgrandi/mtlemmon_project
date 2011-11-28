@@ -29,12 +29,12 @@
         mapView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 20);
         // Using GPS coordinates from Summerhaven, AZ for the center struct
         MKCoordinateRegion region;
-        region.center.latitude = 32.4415965;
-        region.center.longitude = -110.7766004;
-        region.span.latitudeDelta = 0.5;
+        region.center.latitude = 32.35386297889634;
+        region.center.longitude = -110.73051452636719;
+        region.span.latitudeDelta = 0.15;
         region.span.longitudeDelta = 0.0;
         mapView.region = region;
-        self.mapView.mapType = MKMapTypeSatellite;
+        self.mapView.mapType = MKMapTypeHybrid;
         
         [self.view addSubview: mapView];
         
