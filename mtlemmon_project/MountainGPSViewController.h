@@ -18,8 +18,8 @@
     MtLemmonAnnotation *BCAnnotation, *WPAnnotation, *MCAnnotation, *IRAnnotation;
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(MtLemmonAnnotation *)annotation;
+
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
-
-
 
 @end

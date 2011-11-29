@@ -8,6 +8,7 @@
 
 #import "MountainGPSViewController.h"
 #import "MtLemmonAnnotation.h"
+#import <MapKit/MKPinAnnotationView.h>
 
 @implementation MountainGPSViewController
 
@@ -17,7 +18,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
+ 
         CGRect uiViewBounds = self.view.bounds;
         
         // set the frame to be the size of the size of the view (the UIImageView)
@@ -81,7 +82,7 @@
     stop4Loc.latitude = 32.43352129321256;
     stop4Loc.longitude = -110.751011967659;
     IRAnnotation = [[MtLemmonAnnotation alloc]initWithCoordinate:stop4Loc];
-    IRAnnotation.title = @"Windy Point";
+    IRAnnotation.title = @"Inspiration Rock";
     IRAnnotation.subtitle = @"Click to see more";
     [mapView addAnnotation: IRAnnotation];
     [IRAnnotation release];
@@ -102,6 +103,12 @@
 // Return to previous veiw
 -(IBAction) returnToPrevious: (id) sender {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)dealloc {
+    [mapView release];
+    [mapView dealloc];
+    [super dealloc];
 }
 
 @end
