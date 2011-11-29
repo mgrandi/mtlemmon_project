@@ -14,7 +14,15 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // /...
+
+        // add the button to the top right of the navigation bar to take a journal entry
+        UIBarButtonItem *journalButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
+        
+        [[self navigationItem] setRightBarButtonItem:journalButton];
+        
+        [journalButton release];
+    
+    
     }
     return self;
 }
