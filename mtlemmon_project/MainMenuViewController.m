@@ -8,6 +8,7 @@
 
 #import "MainMenuViewController.h"
 #import "MountainMapViewController.h"
+#import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
 @implementation MainMenuViewController
@@ -22,16 +23,12 @@
         // Flandrau Logo
         // ***************
         // create the UIImage that is the pin
-        UIImage *logo = [UIImage imageNamed:@"MainLogoTrans.png"];
-        UIButton *logoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [logoButton setImage:logo forState:UIControlStateNormal];
-        [logoButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // add the button as a subview to the main imageview
-        [self.view addSubview:logoButton];
-        logoButton.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logo.size.height/2 );
-         
+        UIImage *logoImg = [UIImage imageNamed:@"MainLogoTrans.png"];
+        UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainLogoTrans.png"]];
+        logo.hidden = NO;
+        logo.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logoImg.size.height/2 );
+        [[self view] addSubview:logo];
+
         // **************
         // NSF Logo
         // ***************
@@ -55,6 +52,12 @@
 -(IBAction) staticTourPressed:(id)sender {
     MountainMapViewController *mm = [[MountainMapViewController alloc] init];
     [[self navigationController] pushViewController:mm animated:YES];
+}
+
+// This method will be called when the "Begin GPS Tour" button is pressed
+-(IBAction) GPSTourPressed:(id)sender {
+    MountainGPSViewController *mGPS = [[MountainGPSViewController alloc] init];
+    [[self navigationController] pushViewController:mGPS animated:YES];
 }
 
 // This method will be called when the "About" button is pressed

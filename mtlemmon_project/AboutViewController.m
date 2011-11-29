@@ -15,6 +15,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+
         // **************
         // Flandrau Logo
         // ***************
@@ -27,23 +28,7 @@
         
         // add the button as a subview to the main imageview
         [self.view addSubview:logoButton];
-        logoButton.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logo.size.height/2 );
-        
-        // **************
-        // NSF Logo
-        // ***************
-        // create the UIImage that is the pin
-        UIImage *logoNSF = [UIImage imageNamed:@"NSF_Logo.PNG"];
-        UIButton *logoNSFButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [logoNSFButton setImage:logoNSF forState:UIControlStateNormal];
-        [logoNSFButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // add the button as a subview to the main imageview
-        [self.view addSubview:logoNSFButton];
-        float imgWidth = logoNSF.size.width/10;
-        float imgHeight = logoNSF.size.height/10;
-        logoNSFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
+        logoButton.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, logo.size.height/2 );
         
         // *********************************************
         // Create back button for the about page
@@ -53,7 +38,7 @@
                        action:@selector(returnToPrevious:)
              forControlEvents:UIControlEventTouchDown];
         [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
-        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 80), 60.0, 35.0);
+        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 70), 60.0, 35.0);
         [self.view addSubview:buttonBack];
     }
     return self;

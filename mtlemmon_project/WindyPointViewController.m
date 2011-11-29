@@ -8,15 +8,89 @@
 
 #import "WindyPointViewController.h"
 
+#import "WPLifeZonesScrollViewController.h"
+#import "WPGeologyScrollViewController.h"
+#import "WPBasinScrollViewController.h"
+
 @implementation WindyPointViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+        UIImage *bg = [UIImage imageNamed:@"background_1.png"];
+        UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
+        [self.view addSubview: bgv];
+        
+        // *********************************************
+        // CreateWelcome Text
+        // *********************************************
+        UILabel *welcome = [[UILabel alloc] init ];
+        welcome.numberOfLines = 0; // Allows for infinite number of lines
+        welcome.lineBreakMode = UILineBreakModeWordWrap;
+        [welcome setText: @"Welcome to WindyPoint! \nWhat would you like to learn about?"];
+        welcome.backgroundColor = [UIColor clearColor];
+        welcome.textColor = [UIColor whiteColor];
+        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 50.0);
+        [self.view addSubview: welcome];
+        
+        
+        // *********************************************
+        // Create Life Zones Button
+        // *********************************************
+        UIButton *buttonLZ = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonLZ addTarget:self 
+                       action:@selector(lZPressed:)
+             forControlEvents:UIControlEventTouchDown];
+        [buttonLZ setTitle:@"Life Zones" forState:UIControlStateNormal];
+        [buttonLZ setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
+        buttonLZ.frame = CGRectMake(20.0, 95.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonLZ];
+        
+        // *********************************************
+        // Create Basin History Button
+        // *********************************************
+        UIButton *buttonBH = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonBH addTarget:self 
+                     action:@selector(bHPressed:)
+           forControlEvents:UIControlEventTouchDown];
+        [buttonBH setTitle:@"Basin History" forState:UIControlStateNormal];
+        [buttonBH setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
+        buttonBH.frame = CGRectMake(20.0, 150.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonBH];
+        
+        // *********************************************
+        // Create Geology Button
+        // *********************************************
+        UIButton *buttonGeo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonGeo addTarget:self 
+                     action:@selector(geoPressed:)
+           forControlEvents:UIControlEventTouchDown];
+        [buttonGeo setTitle:@"Geology" forState:UIControlStateNormal];
+        [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        buttonGeo.frame = CGRectMake(20.0, 205.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonGeo];
     }
     return self;
+}
+
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    WPLifeZonesScrollViewController *wplz = [[WPLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wplz animated:YES];
+}
+
+// Do this action if the BASIN HISTORY button is pressed
+-(void) bHPressed: (id) sender {
+    WPBasinScrollViewController *wpBas = [[WPBasinScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wpBas animated:YES];
+}
+
+// Do this action if the GEOLOGY button is pressed
+-(void) geoPressed: (id) sender {
+    WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
+    [[self navigationController] pushViewController:wpGeo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -30,23 +104,6 @@
 -(void) viewDidAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
-
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
 
 - (void)viewDidUnload
 {
