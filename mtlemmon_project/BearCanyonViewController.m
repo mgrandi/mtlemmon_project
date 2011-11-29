@@ -31,8 +31,21 @@
         fireButton.frame = CGRectMake(3, 150, ([UIScreen mainScreen].bounds.size.width)-6, 65);
         
         
+        UIBarButtonItem *test = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
+        
+        [[self navigationItem] setRightBarButtonItem:test];
+        
+        [test release];
+        
+        
     }
     return self;
+}
+
+- (void)journalButtonClicked:(id) sender {
+    
+    NSLog(@"hi");
+    
 }
 
 - (void)didReceiveMemoryWarning
