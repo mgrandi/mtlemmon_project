@@ -22,6 +22,14 @@
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
         [self.view addSubview: bgv];
         
+        
+        // add the button to the top right of the navigation bar to take a journal entry
+        UIBarButtonItem *journalButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
+        
+        [[self navigationItem] setRightBarButtonItem:journalButton];
+        
+        [journalButton release];
+        
         // *********************************************
         // Create Welcome Text
         // *********************************************
@@ -46,11 +54,7 @@
         buttonFire.frame = CGRectMake(20.0, 95.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonFire];
         
-        UIBarButtonItem *test = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
-        
-        [[self navigationItem] setRightBarButtonItem:test];
-        
-        [test release];
+
         
         
         // *********************************************
