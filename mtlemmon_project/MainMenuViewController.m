@@ -23,16 +23,12 @@
         // Flandrau Logo
         // ***************
         // create the UIImage that is the pin
-        UIImage *logo = [UIImage imageNamed:@"MainLogoTrans.png"];
-        UIButton *logoButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
-        [logoButton setImage:logo forState:UIControlStateNormal];
-        [logoButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // add the button as a subview to the main imageview
-        [self.view addSubview:logoButton];
-        logoButton.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logo.size.height/2 );
-         
+        UIImage *logoImg = [UIImage imageNamed:@"MainLogoTrans.png"];
+        UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainLogoTrans.png"]];
+        logo.hidden = NO;
+        logo.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logoImg.size.height/2 );
+        [[self view] addSubview:logo];
+
         // **************
         // NSF Logo
         // ***************
