@@ -11,6 +11,10 @@
 		650F0B0D1465EC8C00978029 /* MountainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountainMapViewController.m */; };
 		650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */; };
 		650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */; };
+		659ABFDE147B71B000DE5485 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 659ABFDD147B71B000DE5485 /* NSData+Base64.m */; };
+		659ABFE1147B720400DE5485 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659ABFE0147B720400DE5485 /* JSONKit.m */; };
+		65A55D67146F13A000117BBC /* BearCanyonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A55D66146F13A000117BBC /* BearCanyonView.xib */; };
+
 		65EDEAA91465CEB00009AC84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAA81465CEB00009AC84 /* UIKit.framework */; };
 		65EDEAAB1465CEB00009AC84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAA1465CEB00009AC84 /* Foundation.framework */; };
 		65EDEAAD1465CEB00009AC84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAC1465CEB00009AC84 /* CoreGraphics.framework */; };
@@ -55,6 +59,12 @@
 		650F0B0C1465EC8C00978029 /* MountainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountainMapViewController.m; sourceTree = "<group>"; };
 		650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_Map_Pin_small.png; sourceTree = "<group>"; };
 		650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky_Islands_Trip.png; sourceTree = "<group>"; };
+		659ABFDC147B71B000DE5485 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		659ABFDD147B71B000DE5485 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		659ABFDF147B720400DE5485 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		659ABFE0147B720400DE5485 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		65A55D66146F13A000117BBC /* BearCanyonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BearCanyonView.xib; sourceTree = "<group>"; };
+
 		65EDEAA41465CEB00009AC84 /* mtlemmon_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtlemmon_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EDEAA81465CEB00009AC84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65EDEAAA1465CEB00009AC84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -126,6 +136,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659ABFDA147B719C00DE5485 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				659ABFDF147B720400DE5485 /* JSONKit.h */,
+				659ABFE0147B720400DE5485 /* JSONKit.m */,
+				659ABFDC147B71B000DE5485 /* NSData+Base64.h */,
+				659ABFDD147B71B000DE5485 /* NSData+Base64.m */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
 		65EDEA991465CEB00009AC84 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +178,7 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
+				659ABFDA147B719C00DE5485 /* Libraries */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
 				B888EA971475DDD50086C127 /* AboutView.xib */,
@@ -352,6 +374,8 @@
 				65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */,
 				B888EA801475C4990086C127 /* MainMenuViewController.m in Sources */,
 				B888EA961475DD530086C127 /* AboutViewController.m in Sources */,
+				659ABFDE147B71B000DE5485 /* NSData+Base64.m in Sources */,
+				659ABFE1147B720400DE5485 /* JSONKit.m in Sources */,
 				B818A8FC147B609500F09A2C /* BCFireScrollViewController.m in Sources */,
 				B8750B8514804C3C00FC0C6B /* BCLifeZonesScrollViewController.m in Sources */,
 				B8750B8914804E9300FC0C6B /* WPLifeZonesScrollViewController.m in Sources */,
