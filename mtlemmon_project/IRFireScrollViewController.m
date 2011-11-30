@@ -1,13 +1,14 @@
 //
-//  BCFireViewController.m
+//  IRFireScrollViewController.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/21/11.
+//  Created by Patrick Rickards on 11/29/11.
+//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "BCFireScrollViewController.h"
+#import "IRFireScrollViewController.h"
 
-@implementation BCFireScrollViewController
+@implementation IRFireScrollViewController
 
 @synthesize scrollView;
 @synthesize pageControl;
