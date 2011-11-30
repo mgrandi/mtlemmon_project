@@ -23,6 +23,8 @@
         [self.view addSubview: bgv];
         
         
+        
+        
         // add the button to the top right of the navigation bar to take a journal entry
         UIBarButtonItem *journalButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
         
@@ -36,7 +38,7 @@
         UILabel *welcome = [[UILabel alloc] init ];
         welcome.numberOfLines = 0; // Allows for infinite number of lines
         welcome.lineBreakMode = UILineBreakModeWordWrap;
-        [welcome setText: @"Welcome to Stop 1: \nMolino Canyon! \n\n\n\nWhat would you like to learn about?"];
+        [welcome setText: @"Welcome to Stop 1: \nMolino Canyon Overlook! \n\n\n\nWhat would you like to learn about?"];
         welcome.backgroundColor = [UIColor clearColor];
         welcome.textColor = [UIColor whiteColor];
         welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);

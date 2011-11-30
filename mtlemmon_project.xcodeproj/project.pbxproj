@@ -208,6 +208,7 @@
 				1549A3821485FE0C00CC7310 /* IRLifeZonesScrollViewController.h */,
 				1549A3831485FE0C00CC7310 /* IRLifeZonesScrollViewController.m */,
 				154370731486AEE8007F5F01 /* IRLifeZonesScrollView.xib */,
+				B823F0A9148198BA0018A32D /* PListLoader.h */,
 			);
 			name = IR;
 			sourceTree = "<group>";
@@ -304,7 +305,6 @@
 				1549A37A1485FD5700CC7310 /* MC */,
 				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
 				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
-				B823F0A9148198BA0018A32D /* PListLoader.h */,
 				1549A37B1485FDA800CC7310 /* IR */,
 				B823F0AA148198BA0018A32D /* PListLoader.m */,
 			);
