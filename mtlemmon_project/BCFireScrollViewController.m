@@ -16,30 +16,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    UIColor *color = [[UIColor alloc] initWithRed:90.0/100.0 green:85.0/100.0 blue:80.0/100.0 alpha:1.0];
     NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", nil];
-    NSArray *views = [NSArray arrayWithObjects: nil, nil, nil, nil];
+    pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
+        
+        // create a CGSize struct to use to change the size of the ScrollView and view
+        struct CGSize frameSize;
+        frameSize.width = ([UIScreen mainScreen].bounds.size.width);
+        frameSize.height = ( ([UIScreen mainScreen].bounds.size.height) - 44 );
+        
+        scrollView.contentSize = frameSize;
+        
+        // Set up the frame location and size
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
         frame.origin.y = 0;
-        frame.size = self.scrollView.frame.size;
+        frame.size = frameSize;
         
+        // Set the frame as the Subview
         UIView *subview = [[UIView alloc] initWithFrame:frame];
-        subview.backgroundColor = color;
         [self.scrollView addSubview:subview];
         
-        UIImage *bg = [UIImage imageNamed:@"background_1.png"];
+        UIImage *bg = [UIImage imageNamed:@"background_1sm.png"];
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
         // add the button as a subview to the main imageview
         [subview addSubview: bgv];
         
-        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 10, 200, 100)];
-        myLabel.text =[text objectAtIndex:i];
+        UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, ([UIScreen mainScreen].bounds.size.width - 20), ([UIScreen mainScreen].bounds.size.height - 20) )];
+        
+        myLabel.numberOfLines = 0; // Allows for infinite number of lines
+        myLabel.lineBreakMode = UILineBreakModeWordWrap;
+        
+        [pll setAndScanFile: @"BCFire"];
+        myLabel.text = [pll getStringAtIndex: i];
+        
         myLabel.textColor = [UIColor whiteColor];
-        myLabel.backgroundColor = [UIColor clearColor]; // [UIColor brownColor];
+        myLabel.backgroundColor = [UIColor clearColor];
         [subview addSubview:myLabel];
         
         // release the items

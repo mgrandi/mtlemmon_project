@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PListLoader.h"
 
 @interface BCFireScrollViewController : UIViewController {
     UIScrollView* scrollView;
     UIPageControl* pageControl;
+    
+    PListLoader* pll;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender;

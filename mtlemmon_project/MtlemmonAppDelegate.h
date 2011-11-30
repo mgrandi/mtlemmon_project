@@ -11,9 +11,6 @@
 /*
  MtlemmonAppDelegate.h
  header file for MtlemmonAppDelegate.m
- 
- 
- 
  */
 @interface MtlemmonAppDelegate : UIResponder <UIApplicationDelegate> {
     

@@ -13,9 +13,6 @@
 /*
  MtlemmonAppDelegate.m 
  the application delegate for the program
- 
- 
- 
  */
 @implementation MtlemmonAppDelegate
 
