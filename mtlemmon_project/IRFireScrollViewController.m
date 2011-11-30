@@ -49,7 +49,7 @@
         myLabel.numberOfLines = 0; // Allows for infinite number of lines
         myLabel.lineBreakMode = UILineBreakModeWordWrap;
         
-        [pll setAndScanFile: @"BCFire"];
+        [pll setAndScanFile: @"IRFire"];
         myLabel.text = [pll getStringAtIndex: i];
         
         myLabel.textColor = [UIColor whiteColor];

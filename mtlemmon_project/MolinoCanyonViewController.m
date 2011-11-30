@@ -43,16 +43,16 @@
         [self.view addSubview: welcome];
         
         // *********************************************
-        // Create Fire Button
+        // Create Geo History Button
         // *********************************************
-        UIButton *buttonFire = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [buttonFire addTarget:self 
+        UIButton *buttonGeo = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [buttonGeo addTarget:self 
                        action:@selector(geoPressed:)
              forControlEvents:UIControlEventTouchDown];
-        [buttonFire setTitle:@"Geo History" forState:UIControlStateNormal];
-        [buttonFire setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-        buttonFire.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
-        [self.view addSubview:buttonFire];
+        [buttonGeo setTitle:@"Geo History" forState:UIControlStateNormal];
+        [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        buttonGeo.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        [self.view addSubview:buttonGeo];
         
         
         

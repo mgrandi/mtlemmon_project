@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", @"", nil];
+    NSArray *text = [NSArray arrayWithObjects:@"Page 1 of 1", nil];
     pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
@@ -49,7 +49,7 @@
         myLabel.numberOfLines = 0; // Allows for infinite number of lines
         myLabel.lineBreakMode = UILineBreakModeWordWrap;
         
-        [pll setAndScanFile: @"BCFire"];
+        [pll setAndScanFile: @"MCLifeZones"];
         myLabel.text = [pll getStringAtIndex: i];
         
         myLabel.textColor = [UIColor whiteColor];
