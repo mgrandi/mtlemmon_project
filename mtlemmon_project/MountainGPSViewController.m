@@ -53,7 +53,7 @@
     MCAnnotation = [[MtLemmonAnnotation alloc]initWithCoordinate:stop1Loc];
     MCAnnotation.title = @"Molino Canyon";
     MCAnnotation.subtitle = @"Click to see more";
-    [mapView addAnnotation: MCAnnotation];
+    [mapView addAnnotation:MCAnnotation];
     [MCAnnotation release];
     
     // For Bear Canyon
@@ -109,6 +109,27 @@
     [mapView release];
     [mapView dealloc];
     [super dealloc];
+}
+
+#pragma mark -
+#pragma mark MKMapViewDelegate
+
+- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation
+{
+    NSLog(@"mapView method was called");
+    static NSString* BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
+    MKPinAnnotationView *MCPin = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier] autorelease];
+    
+    MCPin.pinColor = MKPinAnnotationColorPurple;
+    MCPin.animatesDrop = YES;
+    MCPin.canShowCallout = YES;
+    
+    UIButton* MCButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
+    [MCButton addTarget:self
+                 action:@selector(showDetails:)
+       forControlEvents:UIControlEventTouchUpInside];
+    MCPin.rightCalloutAccessoryView = MCButton;
+    return MCPin;
 }
 
 @end

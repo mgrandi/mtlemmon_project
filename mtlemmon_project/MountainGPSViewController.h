@@ -12,7 +12,7 @@
 #import <MapKit/MKAnnotation.h>
 #import "MtLemmonAnnotation.h"
 
-@interface MountainGPSViewController : UIViewController <MKAnnotation>
+@interface MountainGPSViewController : UIViewController<MKMapViewDelegate>
 {
 	IBOutlet MKMapView *mapView;
     MtLemmonAnnotation *BCAnnotation, *WPAnnotation, *MCAnnotation, *IRAnnotation;
