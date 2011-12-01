@@ -13,8 +13,6 @@
 		650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */; };
 		659ABFDE147B71B000DE5485 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 659ABFDD147B71B000DE5485 /* NSData+Base64.m */; };
 		659ABFE1147B720400DE5485 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 659ABFE0147B720400DE5485 /* JSONKit.m */; };
-		65A55D67146F13A000117BBC /* BearCanyonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65A55D66146F13A000117BBC /* BearCanyonView.xib */; };
-
 		65EDEAA91465CEB00009AC84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAA81465CEB00009AC84 /* UIKit.framework */; };
 		65EDEAAB1465CEB00009AC84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAA1465CEB00009AC84 /* Foundation.framework */; };
 		65EDEAAD1465CEB00009AC84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65EDEAAC1465CEB00009AC84 /* CoreGraphics.framework */; };
@@ -63,8 +61,6 @@
 		659ABFDD147B71B000DE5485 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		659ABFDF147B720400DE5485 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		659ABFE0147B720400DE5485 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		65A55D66146F13A000117BBC /* BearCanyonView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BearCanyonView.xib; sourceTree = "<group>"; };
-
 		65EDEAA41465CEB00009AC84 /* mtlemmon_project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mtlemmon_project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65EDEAA81465CEB00009AC84 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65EDEAAA1465CEB00009AC84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
