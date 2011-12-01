@@ -3,7 +3,7 @@
 //  mtlemmon_project
 //
 //  Created by Mark Grandi on 11/5/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import "MountainMapViewController.h"
@@ -30,6 +30,23 @@
         
         // set the frame to be the size of the size of the view (the UIImageView)
         self.view.frame = CGRectMake(uiViewBounds.origin.x, uiViewBounds.origin.y, uiViewBounds.size.width, uiViewBounds.size.height);
+        
+        // ************
+        // create the journal button for the top right
+        // *************
+            
+        UIButton *journalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [journalButton setTitle:@"Journal" forState:UIControlStateNormal];
+
+        // add selector
+        [journalButton addTarget:self action:@selector(journalButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:journalButton];
+        
+        
+        // set the frame
+        journalButton.frame = CGRectMake(210, 10, 90, 28);
+        
         
         
         // **************
@@ -101,18 +118,28 @@
         pinViewMolino.frame = CGRectMake(230, 303, molinoPin.size.width, molinoPin.size.height);
         
         // *********************************************
-        // Create back button for static map view
+        // Create back button for the static map page
         // *********************************************
         UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBack addTarget:self 
-                   action:@selector(returnToPrevious:)
-         forControlEvents:UIControlEventTouchDown];
+                       action:@selector(returnToPrevious:)
+             forControlEvents:UIControlEventTouchDown];
         [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
-        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 80), 60.0, 35.0);
+        // The color used for this button is based on the official UA colors
+        [buttonBack setTitleColor:[[UIColor alloc] initWithRed:0.0 green:51.0/256.0 blue:102.0/256.0 alpha:1.0] forState:UIControlStateNormal];
+        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 70), 60.0, 35.0);
         [self.view addSubview:buttonBack];
         
     }
     return self;
+}
+
+// gets called when the journal button gets clicked
+-(void) journalButtonPressed:(id) sender {
+    
+    NSLog(@"pressed");
+    
+    
 }
 
 // This method will be called when the Bear Canyon pin is pressed

@@ -3,21 +3,48 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/17/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
+//  
+//  This ViewController Controls the view of the main menu of the whole applicatin
 
+// Here we import all necesarry header files
 #import "MainMenuViewController.h"
 #import "MountainMapViewController.h"
 #import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
+// Begin implementation of this ViewController
 @implementation MainMenuViewController
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        // **************
+        // Flandrau Logo
+        // ***************
+        // create the UIImage Flandrau/AU logo
+        UIImage *logoImg = [UIImage imageNamed:@"MainLogoTrans.png"];
+        UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainLogoTrans.png"]];
+        logo.hidden = NO;
+        logo.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logoImg.size.height/2 );
+        [[self view] addSubview:logo];
+        
+        // **************
+        // NSF Logo
+        // ***************
+        // create the UIImage National Science Foundation logo
+        UIImage *logoNSF = [UIImage imageNamed:@"NSF_Logo.PNG"];
+        UIButton *logoNSFButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [logoNSFButton setImage:logoNSF forState:UIControlStateNormal];
+        [logoNSFButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        // add the button as a subview to the main imageview
+        [self.view addSubview:logoNSFButton];
+        float imgWidth = logoNSF.size.width/10;
+        float imgHeight = logoNSF.size.height/10;
+        logoNSFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
     
     }
     return self;
@@ -48,33 +75,6 @@
 -(void) viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [self.navigationController setNavigationBarHidden:YES];
-    
-    // **************
-    // Flandrau Logo
-    // ***************
-    // create the UIImage that is the pin
-    UIImage *logoImg = [UIImage imageNamed:@"MainLogoTrans.png"];
-    UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainLogoTrans.png"]];
-    logo.hidden = NO;
-    logo.frame = CGRectMake(0, 70, [UIScreen mainScreen].bounds.size.width, logoImg.size.height/2 );
-    [[self view] addSubview:logo];
-    
-    // **************
-    // NSF Logo
-    // ***************
-    // create the UIImage that is the pin
-    UIImage *logoNSF = [UIImage imageNamed:@"NSF_Logo.PNG"];
-    UIButton *logoNSFButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    
-    [logoNSFButton setImage:logoNSF forState:UIControlStateNormal];
-    [logoNSFButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
-    
-    // add the button as a subview to the main imageview
-    [self.view addSubview:logoNSFButton];
-    float imgWidth = logoNSF.size.width/10;
-    float imgHeight = logoNSF.size.height/10;
-    logoNSFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
-    
 }
 
 @end

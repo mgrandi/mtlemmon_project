@@ -3,13 +3,16 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/17/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
+//
+// This is the ViewController implementation for the about page of the app
 //
 
+// Import needed header files here
 #import "AboutViewController.h"
 
+// Begin implementation
 @implementation AboutViewController
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,6 +41,8 @@
                        action:@selector(returnToPrevious:)
              forControlEvents:UIControlEventTouchDown];
         [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
+        // The color used for this button is based on the official UA colors
+        [buttonBack setTitleColor:[[UIColor alloc] initWithRed:0.0 green:51.0/256.0 blue:102.0/256.0 alpha:1.0] forState:UIControlStateNormal];
         buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 70), 60.0, 35.0);
         [self.view addSubview:buttonBack];
     }
