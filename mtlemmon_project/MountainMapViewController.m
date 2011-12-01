@@ -31,6 +31,23 @@
         // set the frame to be the size of the size of the view (the UIImageView)
         self.view.frame = CGRectMake(uiViewBounds.origin.x, uiViewBounds.origin.y, uiViewBounds.size.width, uiViewBounds.size.height);
         
+        // ************
+        // create the journal button for the top right
+        // *************
+            
+        UIButton *journalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [journalButton setTitle:@"Journal" forState:UIControlStateNormal];
+
+        // add selector
+        [journalButton addTarget:self action:@selector(journalButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:journalButton];
+        
+        
+        // set the frame
+        journalButton.frame = CGRectMake(210, 10, 90, 28);
+        
+        
         
         // **************
         // Bear Canyon Pin
@@ -115,6 +132,14 @@
         
     }
     return self;
+}
+
+// gets called when the journal button gets clicked
+-(void) journalButtonPressed:(id) sender {
+    
+    NSLog(@"pressed");
+    
+    
 }
 
 // This method will be called when the Bear Canyon pin is pressed
