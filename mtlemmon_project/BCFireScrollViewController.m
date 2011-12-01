@@ -5,6 +5,7 @@
 //  Created by Benjamin Dicken on 11/21/11.
 //
 
+
 #import "BCFireScrollViewController.h"
 
 @implementation BCFireScrollViewController
@@ -16,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", nil];
+    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", @"", nil];
     pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
@@ -24,7 +25,7 @@
         // create a CGSize struct to use to change the size of the ScrollView and view
         struct CGSize frameSize;
         frameSize.width = ([UIScreen mainScreen].bounds.size.width);
-        frameSize.height = ( ([UIScreen mainScreen].bounds.size.height) - 44 );
+        frameSize.height = ( ([UIScreen mainScreen].bounds.size.height) - 44);
         
         scrollView.contentSize = frameSize;
         

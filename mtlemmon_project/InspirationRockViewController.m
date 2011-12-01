@@ -8,6 +8,10 @@
 
 #import "InspirationRockViewController.h"
 
+#import "IRFireScrollViewController.h"
+#import "IRGeologyScrollViewController.h"
+#import "IRLifeZonesScrollViewController.h"
+
 @implementation InspirationRockViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -23,8 +27,25 @@
         [journalButton release];
     
     }
-    
     return self;
+}
+
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    IRLifeZonesScrollViewController *irlz = [[IRLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:irlz animated:YES];
+}
+
+// Do this action if the FIRE button is pressed
+-(void) firePressed: (id) sender {
+    IRFireScrollViewController *irFire = [[IRFireScrollViewController alloc] init];
+    [[self navigationController] pushViewController:irFire animated:YES];
+}
+
+// Do this action if the GEOLOGY button is pressed
+-(void) geoPressed: (id) sender {
+    IRGeologyScrollViewController *irGeo = [[IRGeologyScrollViewController alloc] init];
+    [[self navigationController] pushViewController:irGeo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,23 +60,6 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
-*/
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -68,5 +72,4 @@
     // Return YES for supported orientations
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
-
 @end

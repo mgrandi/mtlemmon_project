@@ -3,7 +3,7 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/27/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,13 +12,13 @@
 #import <MapKit/MKAnnotation.h>
 #import "MtLemmonAnnotation.h"
 
-@interface MountainGPSViewController : UIViewController <MKAnnotation>
+@interface MountainGPSViewController : UIViewController <MKMapViewDelegate>
 {
 	IBOutlet MKMapView *mapView;
     MtLemmonAnnotation *BCAnnotation, *WPAnnotation, *MCAnnotation, *IRAnnotation;
 }
 
-- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(MtLemmonAnnotation *)annotation;
+//- (MKAnnotationView *)mapView:(MKMapView *)theMapView viewForAnnotation:(id <MKAnnotation>)annotation;
 
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 

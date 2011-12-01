@@ -34,10 +34,10 @@
         UILabel *welcome = [[UILabel alloc] init ];
         welcome.numberOfLines = 0; // Allows for infinite number of lines
         welcome.lineBreakMode = UILineBreakModeWordWrap;
-        [welcome setText: @"Welcome to Bear Canyon! \nWhat would you like to learn about?"];
+        [welcome setText: @"Welcome to Stop 2: \nMiddle Bear Picnic Area! \n\n\n\nWhat would you like to learn about?"];
         welcome.backgroundColor = [UIColor clearColor];
         welcome.textColor = [UIColor whiteColor];
-        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 50.0);
+        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);
         [self.view addSubview: welcome];
         
         // *********************************************
@@ -49,7 +49,7 @@
              forControlEvents:UIControlEventTouchDown];
         [buttonFire setTitle:@"Fire" forState:UIControlStateNormal];
         [buttonFire setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
-        buttonFire.frame = CGRectMake(20.0, 95.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        buttonFire.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonFire];
         
 
@@ -64,7 +64,7 @@
              forControlEvents:UIControlEventTouchDown];
         [buttonLZ setTitle:@"Life Zones" forState:UIControlStateNormal];
         [buttonLZ setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-        buttonLZ.frame = CGRectMake(20.0, 150.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        buttonLZ.frame = CGRectMake(20.0, 215.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonLZ];
     }
     return self;

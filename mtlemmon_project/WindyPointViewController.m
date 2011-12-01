@@ -36,10 +36,10 @@
         UILabel *welcome = [[UILabel alloc] init ];
         welcome.numberOfLines = 0; // Allows for infinite number of lines
         welcome.lineBreakMode = UILineBreakModeWordWrap;
-        [welcome setText: @"Welcome to WindyPoint! \nWhat would you like to learn about?"];
+        [welcome setText: @"Welcome to Stop 3: \nWindy Point! \n\n\n\nWhat would you like to learn about?"];
         welcome.backgroundColor = [UIColor clearColor];
         welcome.textColor = [UIColor whiteColor];
-        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 50.0);
+        welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);
         [self.view addSubview: welcome];
         
         
@@ -52,7 +52,7 @@
              forControlEvents:UIControlEventTouchDown];
         [buttonLZ setTitle:@"Life Zones" forState:UIControlStateNormal];
         [buttonLZ setTitleColor:[UIColor greenColor] forState:UIControlStateNormal];
-        buttonLZ.frame = CGRectMake(20.0, 95.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        buttonLZ.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonLZ];
         
         // *********************************************
@@ -64,7 +64,7 @@
            forControlEvents:UIControlEventTouchDown];
         [buttonBH setTitle:@"Basin History" forState:UIControlStateNormal];
         [buttonBH setTitleColor:[UIColor brownColor] forState:UIControlStateNormal];
-        buttonBH.frame = CGRectMake(20.0, 150.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        buttonBH.frame = CGRectMake(20.0, 215, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonBH];
         
         // *********************************************
@@ -76,7 +76,7 @@
            forControlEvents:UIControlEventTouchDown];
         [buttonGeo setTitle:@"Geology" forState:UIControlStateNormal];
         [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        buttonGeo.frame = CGRectMake(20.0, 205.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
+        buttonGeo.frame = CGRectMake(20.0, 270, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
         [self.view addSubview:buttonGeo];
     }
     return self;

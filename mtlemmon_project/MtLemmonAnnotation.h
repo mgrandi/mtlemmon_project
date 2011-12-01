@@ -3,6 +3,7 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/27/11.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -15,6 +16,7 @@
 }
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)loc;
+- (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 

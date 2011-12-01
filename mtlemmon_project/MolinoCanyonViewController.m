@@ -8,6 +8,9 @@
 
 #import "MolinoCanyonViewController.h"
 
+#import "MCGeoHistoryScrollViewController.h"
+#import "MCLifeZonesScrollViewController.h"
+
 @implementation MolinoCanyonViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -27,34 +30,33 @@
     return self;
 }
 
+- (void)journalButtonClicked:(id) sender {
+    
+    NSLog(@"hi");
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 -(void) viewDidAppear:(BOOL)animated {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
-#pragma mark - View lifecycle
-
-/*
-// Implement loadView to create a view hierarchy programmatically, without using a nib.
-- (void)loadView
-{
+// Do this action if the FIRE button is pressed
+-(void) geoPressed: (id) sender {
+    MCGeoHistoryScrollViewController *mcgh = [[MCGeoHistoryScrollViewController alloc] init];
+    [[self navigationController] pushViewController:mcgh animated:YES];
 }
-*/
 
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+// Do this action if the LIFE ZONES button is pressed
+-(void) lZPressed: (id) sender {
+    MCLifeZonesScrollViewController *bclz = [[MCLifeZonesScrollViewController alloc] init];
+    [[self navigationController] pushViewController:bclz animated:YES];
 }
-*/
 
 - (void)viewDidUnload
 {
