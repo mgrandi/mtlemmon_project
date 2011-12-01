@@ -3,7 +3,7 @@
 //  mtlemmon_project
 //
 //  Created by Mark Grandi on 11/5/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import "MountainMapViewController.h"

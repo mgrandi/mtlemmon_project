@@ -3,13 +3,16 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/17/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
+//
+// This is the ViewController implementation for the about page of the app
 //
 
+// Import needed header files here
 #import "AboutViewController.h"
 
+// Begin implementation
 @implementation AboutViewController
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

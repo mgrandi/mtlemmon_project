@@ -3,16 +3,18 @@
 //  mtlemmon_project
 //
 //  Created by Benjamin Dicken on 11/17/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
-//
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
+//  
+//  This ViewController Controls the view of the main menu of the whole applicatin
 
+// Here we import all necesarry header files
 #import "MainMenuViewController.h"
 #import "MountainMapViewController.h"
 #import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
+// Begin implementation of this ViewController
 @implementation MainMenuViewController
-
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,7 +24,7 @@
         // **************
         // Flandrau Logo
         // ***************
-        // create the UIImage that is the pin
+        // create the UIImage Flandrau/AU logo
         UIImage *logoImg = [UIImage imageNamed:@"MainLogoTrans.png"];
         UIImageView *logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"MainLogoTrans.png"]];
         logo.hidden = NO;
@@ -32,10 +34,9 @@
         // **************
         // NSF Logo
         // ***************
-        // create the UIImage that is the pin
+        // create the UIImage National Science Foundation logo
         UIImage *logoNSF = [UIImage imageNamed:@"NSF_Logo.PNG"];
         UIButton *logoNSFButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        
         [logoNSFButton setImage:logoNSF forState:UIControlStateNormal];
         [logoNSFButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
         
