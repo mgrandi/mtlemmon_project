@@ -101,14 +101,16 @@
         pinViewMolino.frame = CGRectMake(230, 303, molinoPin.size.width, molinoPin.size.height);
         
         // *********************************************
-        // Create back button for static map view
+        // Create back button for the static map page
         // *********************************************
         UIButton *buttonBack = [UIButton buttonWithType:UIButtonTypeRoundedRect];
         [buttonBack addTarget:self 
-                   action:@selector(returnToPrevious:)
-         forControlEvents:UIControlEventTouchDown];
+                       action:@selector(returnToPrevious:)
+             forControlEvents:UIControlEventTouchDown];
         [buttonBack setTitle:@"Back" forState:UIControlStateNormal];
-        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 80), 60.0, 35.0);
+        // The color used for this button is based on the official UA colors
+        [buttonBack setTitleColor:[[UIColor alloc] initWithRed:0.0 green:51.0/256.0 blue:102.0/256.0 alpha:1.0] forState:UIControlStateNormal];
+        buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 70), 60.0, 35.0);
         [self.view addSubview:buttonBack];
         
     }
