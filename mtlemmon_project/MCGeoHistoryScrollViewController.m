@@ -49,7 +49,7 @@
         myLabel.numberOfLines = 0; // Allows for infinite number of lines
         myLabel.lineBreakMode = UILineBreakModeWordWrap;
         
-        [pll setAndScanFile: @"BCFire"];
+        [pll setAndScanFile: @"MCGeoHistory"];
         myLabel.text = [pll getStringAtIndex: i];
         
         myLabel.textColor = [UIColor whiteColor];
@@ -59,11 +59,37 @@
         // release the items
         [myLabel release];
         [subview release];
+        
+        
+        
+        // ************
+        // create the see picture button for the top right
+        // *************
+        
+        UIButton *picButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [picButton setTitle:@"See Picture" forState:UIControlStateNormal];
+        
+        // add selector
+        [picButton addTarget:self action:@selector(picButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:picButton];
+        
+        
+        // set the frame
+        picButton.frame = CGRectMake(210, 10, 90, 28);        
     }
     
     self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height);
 }
 
+
+// gets called when the journal button gets clicked
+-(void) picButtonPressed:(id) sender {
+    
+    NSLog(@"pressed");
+    
+    
+}
 - (void)scrollViewDidScroll:(UIScrollView *)sender {
     // Update the page when more than 50% of the previous/next page is visible
     CGFloat pageWidth = self.scrollView.frame.size.width;
