@@ -11,6 +11,7 @@
 #import "InspirationRockViewController.h"
 #import "WindyPointViewController.h"
 #import "MolinoCanyonViewController.h"
+#import "JournalCreateViewController.h"
 
 /*
  MountainMapViewController.m
@@ -139,31 +140,39 @@
     
     NSLog(@"pressed");
     
+    JournalCreateViewController *jcv = [[JournalCreateViewController alloc]initWithNibName:nil bundle:nil];
+    [[self navigationController] pushViewController:jcv animated:YES];
+    [jcv release];
+    
     
 }
 
 // This method will be called when the Bear Canyon pin is pressed
 -(void) bearCanyonPressed:(id)sender {
-    BearCanyonViewController *bc = [[BearCanyonViewController alloc] init];
+    BearCanyonViewController *bc = [[BearCanyonViewController alloc] initWithNibName:nil bundle:nil];
     [[self navigationController] pushViewController:bc animated:YES];
+    [bc release];
 }
 
 // This method will be called when the Inspiration Rock pin is pressed
 -(void) inspirationRockPressed:(id)sender {
-    InspirationRockViewController *ir = [[InspirationRockViewController alloc] init];
+    InspirationRockViewController *ir = [[InspirationRockViewController alloc] initWithNibName:nil bundle:nil];
     [[self navigationController] pushViewController:ir animated:YES];
+    [ir release];
 }
 
 // This method will be called when the Windy Point pin is pressed
 -(void) windyPointPressed:(id)sender {
-    WindyPointViewController *wp = [[WindyPointViewController alloc] init];
+    WindyPointViewController *wp = [[WindyPointViewController alloc] initWithNibName:nil bundle:nil];
     [[self navigationController] pushViewController:wp animated:YES];
+    [wp release];
 }
 
 // This method will be called when the Molino Canyon pin is pressed
 -(void) molinoCanyonPressed:(id)sender {
-    MolinoCanyonViewController *mc = [[MolinoCanyonViewController alloc] init];
+    MolinoCanyonViewController *mc = [[MolinoCanyonViewController alloc] initWithNibName:nil bundle:nil];
     [[self navigationController] pushViewController:mc animated:YES];
+    [mc release];
 }
 
 // Return to previous veiw
@@ -193,8 +202,9 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self.navigationController setNavigationBarHidden:YES];
+    
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end

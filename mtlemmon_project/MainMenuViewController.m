@@ -51,18 +51,21 @@
 -(IBAction) staticTourPressed:(id)sender {
     MountainMapViewController *mm = [[MountainMapViewController alloc] init];
     [[self navigationController] pushViewController:mm animated:YES];
+    [mm release];
 }
 
 // This method will be called when the "Begin GPS Tour" button is pressed
 -(IBAction) GPSTourPressed:(id)sender {
     MountainGPSViewController *mGPS = [[MountainGPSViewController alloc] init];
     [[self navigationController] pushViewController:mGPS animated:YES];
+    [mGPS release];
 }
 
 // This method will be called when the "About" button is pressed
 -(IBAction) aboutPressed:(id)sender {
     AboutViewController *ab = [[AboutViewController alloc] init];
     [[self navigationController] pushViewController:ab animated:YES];
+    [ab release];
 }
 
 - (void) logoPressed: (id) sender {
@@ -70,8 +73,8 @@
 }
 
 -(void) viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:YES];
-    [self.navigationController setNavigationBarHidden:YES];
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 @end
