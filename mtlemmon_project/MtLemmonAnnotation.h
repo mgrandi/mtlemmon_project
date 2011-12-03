@@ -15,8 +15,7 @@
     NSString *title; 
 }
 
-- (id)initWithCoordinate:(CLLocationCoordinate2D)loc;
-- (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation;
+- (id)initWithCoordinate:(CLLocationCoordinate2D)loc;\
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 

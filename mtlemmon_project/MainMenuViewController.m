@@ -37,16 +37,13 @@
         // ***************
         // create the UIImage National Science Foundation logo
         UIImage *logoNSF = [UIImage imageNamed:@"NSF_Logo.PNG"];
-        UIButton *logoNSFButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        [logoNSFButton setImage:logoNSF forState:UIControlStateNormal];
-        [logoNSFButton addTarget:self action:@selector(logoPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        // add the button as a subview to the main imageview
-        [self.view addSubview:logoNSFButton];
+        UIImageView *logoNSFImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NSF_Logo.PNG"]];
+        logoNSFImage.hidden = NO;
         float imgWidth = logoNSF.size.width/10;
         float imgHeight = logoNSF.size.height/10;
-        logoNSFButton.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
-    
+        logoNSFImage.frame = CGRectMake(([UIScreen mainScreen].bounds.size.width - imgWidth - 15), ([UIScreen mainScreen].bounds.size.height - imgHeight - 30), imgWidth, imgHeight );
+        [[self view] addSubview:logoNSFImage];
+        
     }
     return self;
 }

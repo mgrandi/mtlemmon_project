@@ -138,8 +138,7 @@
 -(void) journalButtonPressed:(id) sender {
     
     NSLog(@"pressed");
-    
-    
+
 }
 
 // This method will be called when the Bear Canyon pin is pressed
