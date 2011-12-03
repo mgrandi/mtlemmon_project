@@ -259,7 +259,6 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
-				659ABFDA147B719C00DE5485 /* Libraries */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
 				B888EA971475DDD50086C127 /* AboutView.xib */,
