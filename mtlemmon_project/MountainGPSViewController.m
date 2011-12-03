@@ -9,6 +9,10 @@
 #import "MountainGPSViewController.h"
 #import "MtLemmonAnnotation.h"
 #import <MapKit/MKPinAnnotationView.h>
+#import "MolinoCanyonViewController.h"
+#import "BearCanyonViewController.h"
+#import "WindyPointViewController.h"
+#import "InspirationRockViewController.h"
 
 @implementation MountainGPSViewController
 
@@ -27,6 +31,7 @@
         
         // add the MKMapView
         mapView = [[MKMapView alloc] init]; 
+        mapView.delegate = self;
         mapView.frame = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 20);
         // Using GPS coordinates from Summerhaven, AZ for the center struct
         MKCoordinateRegion region;
@@ -100,6 +105,30 @@
     return self;
 }
 
+// This method will be called when the Bear Canyon pin is pressed
+-(void) bearCanyonPressed:(id)sender {
+    BearCanyonViewController *bc = [[BearCanyonViewController alloc] init];
+    [[self navigationController] pushViewController:bc animated:YES];
+}
+
+// This method will be called when the Inspiration Rock pin is pressed
+-(void) inspirationRockPressed:(id)sender {
+    InspirationRockViewController *ir = [[InspirationRockViewController alloc] init];
+    [[self navigationController] pushViewController:ir animated:YES];
+}
+
+// This method will be called when the Windy Point pin is pressed
+-(void) windyPointPressed:(id)sender {
+    WindyPointViewController *wp = [[WindyPointViewController alloc] init];
+    [[self navigationController] pushViewController:wp animated:YES];
+}
+
+// This method will be called when the Molino Canyon pin is pressed
+-(void) molinoCanyonPressed:(id)sender {
+    MolinoCanyonViewController *mc = [[MolinoCanyonViewController alloc] init];
+    [[self navigationController] pushViewController:mc animated:YES];
+}
+
 - (void) viewWillAppear:(BOOL)animated {
     
 }
@@ -124,14 +153,22 @@
     static NSString* BridgeAnnotationIdentifier = @"bridgeAnnotationIdentifier";
     MKPinAnnotationView *MCPin = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:BridgeAnnotationIdentifier] autorelease];
     
-    MCPin.pinColor = MKPinAnnotationColorPurple;
+    MCPin.pinColor = MKPinAnnotationColorGreen;
     MCPin.animatesDrop = YES;
     MCPin.canShowCallout = YES;
     
     UIButton* MCButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    [MCButton addTarget:self
-                 action:@selector(showDetails:)
-       forControlEvents:UIControlEventTouchUpInside];
+    if ([annotation.title isEqualToString:@"Molino Canyon"]) {
+        [MCButton addTarget:self action:@selector(molinoCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    } else if ([annotation.title isEqualToString:@"Bear Canyon"]) {
+        [MCButton addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    } else if ([annotation.title isEqualToString:@"Windy Point"]) {
+        [MCButton addTarget:self action:@selector(windyPointPressed:) forControlEvents:UIControlEventTouchUpInside];
+    } else if ([annotation.title isEqualToString:@"Inspiration Rock"]) {
+        [MCButton addTarget:self action:@selector(inspirationRockPressed:) forControlEvents:UIControlEventTouchUpInside];
+    } else {
+        [MCButton addTarget:self action:@selector(returnToPrevious:) forControlEvents:UIControlEventTouchUpInside];
+    }
     MCPin.rightCalloutAccessoryView = MCButton;
     return MCPin;
 }
