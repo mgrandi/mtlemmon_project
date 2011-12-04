@@ -158,13 +158,13 @@
     MCPin.canShowCallout = YES;
     
     UIButton* MCButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    if ([annotation.title isEqualToString:@"Molino Canyon"]) {
+    if ([annotation isEqual:MCAnnotation]) {
         [MCButton addTarget:self action:@selector(molinoCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Bear Canyon"]) {
+    } else if ([annotation isEqual:BCAnnotation]) {
         [MCButton addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Windy Point"]) {
+    } else if ([annotation isEqual:WPAnnotation]) {
         [MCButton addTarget:self action:@selector(windyPointPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Inspiration Rock"]) {
+    } else if ([annotation isEqual:IRAnnotation]) {
         [MCButton addTarget:self action:@selector(inspirationRockPressed:) forControlEvents:UIControlEventTouchUpInside];
     } else {
         [MCButton addTarget:self action:@selector(returnToPrevious:) forControlEvents:UIControlEventTouchUpInside];
