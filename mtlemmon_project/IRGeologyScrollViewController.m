@@ -60,7 +60,7 @@
         [subview release];
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height-50);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *text = [NSArray arrayWithObjects:@"Page 1 of 1", nil];
+    NSArray *text = [NSArray arrayWithObjects:@"Page 1",@"Page 2", nil];
     pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
@@ -32,7 +32,7 @@
         // Set up the frame location and size
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
-        frame.origin.y = 0;
+        frame.origin.y = -100;
         frame.size = frameSize;
         
         // Set the frame as the Subview
@@ -61,7 +61,7 @@
         [subview release];
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height);
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height-50);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153F14F7148AEC6F00D3478A /* GRClose-up.png in Resources */ = {isa = PBXBuildFile; fileRef = 153F14F5148AEC6F00D3478A /* GRClose-up.png */; };
+		153F14F8148AEC6F00D3478A /* GneissRock.png in Resources */ = {isa = PBXBuildFile; fileRef = 153F14F6148AEC6F00D3478A /* GneissRock.png */; };
+		153F14FB148B18DF00D3478A /* PonderosaPine.png in Resources */ = {isa = PBXBuildFile; fileRef = 153F14FA148B18DE00D3478A /* PonderosaPine.png */; };
 		1543706D1486AEA8007F5F01 /* WPGeologyScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1543706C1486AEA8007F5F01 /* WPGeologyScrollView.xib */; };
 		154370701486AEC5007F5F01 /* MCGeoHistoryScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1543706F1486AEC5007F5F01 /* MCGeoHistoryScrollView.xib */; };
 		154370721486AED7007F5F01 /* MCLifeZonesScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 154370711486AED7007F5F01 /* MCLifeZonesScrollView.xib */; };
@@ -75,6 +78,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		153F14F5148AEC6F00D3478A /* GRClose-up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GRClose-up.png"; sourceTree = "<group>"; };
+		153F14F6148AEC6F00D3478A /* GneissRock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GneissRock.png; sourceTree = "<group>"; };
+		153F14FA148B18DE00D3478A /* PonderosaPine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PonderosaPine.png; sourceTree = "<group>"; };
 		1543706C1486AEA8007F5F01 /* WPGeologyScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPGeologyScrollView.xib; sourceTree = "<group>"; };
 		1543706F1486AEC5007F5F01 /* MCGeoHistoryScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCGeoHistoryScrollView.xib; sourceTree = "<group>"; };
 		154370711486AED7007F5F01 /* MCLifeZonesScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MCLifeZonesScrollView.xib; sourceTree = "<group>"; };
@@ -296,12 +302,12 @@
 				65F77B381469C7B90034CF49 /* BearCanyonViewController.h */,
 				65F77B391469C7B90034CF49 /* BearCanyonViewController.m */,
 				B8BB4D21147CB8520068D700 /* BC */,
-				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
-				65F77B401469C7E60034CF49 /* WindyPointViewController.m */,
-				B8750B8614804E1000FC0C6B /* WP */,
 				65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */,
 				65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */,
 				1549A37A1485FD5700CC7310 /* MC */,
+				65F77B3F1469C7E60034CF49 /* WindyPointViewController.h */,
+				65F77B401469C7E60034CF49 /* WindyPointViewController.m */,
+				B8750B8614804E1000FC0C6B /* WP */,
 				65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */,
 				65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */,
 				1549A37B1485FDA800CC7310 /* IR */,
@@ -343,6 +349,9 @@
 		B8D5886C14819DA6000B3164 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				153F14FA148B18DE00D3478A /* PonderosaPine.png */,
+				153F14F5148AEC6F00D3478A /* GRClose-up.png */,
+				153F14F6148AEC6F00D3478A /* GneissRock.png */,
 				B87E58801482DDA500E9593E /* background_1.png */,
 				B87E58811482DDA500E9593E /* background_1sm.png */,
 				B812F10F147618B700115AC0 /* MainLogoTrans.png */,
@@ -464,6 +473,9 @@
 				154370741486AEE8007F5F01 /* IRLifeZonesScrollView.xib in Resources */,
 				154370761486AEFB007F5F01 /* IRGeologyScrollView.xib in Resources */,
 				154370781486AF0A007F5F01 /* IRFireScrollView.xib in Resources */,
+				153F14F7148AEC6F00D3478A /* GRClose-up.png in Resources */,
+				153F14F8148AEC6F00D3478A /* GneissRock.png in Resources */,
+				153F14FB148B18DF00D3478A /* PonderosaPine.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", @"", nil];
+    NSArray *text = [NSArray arrayWithObjects:@"FirePage", nil];
     pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
@@ -32,7 +32,8 @@
         // Set up the frame location and size
         CGRect frame;
         frame.origin.x = self.scrollView.frame.size.width * i;
-        frame.origin.y = 0;
+        frame.origin.y = 80;
+        
         frame.size = frameSize;
         
         // Set the frame as the Subview
@@ -61,7 +62,17 @@
         [subview release];
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height);
+    // ************
+    // create the picture to compliment the text
+    // *************
+    
+    UIImageView *PineView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"PonderosaPine.png"]];
+    [PineView setFrame:CGRectMake(0,0,self.scrollView.frame.size.width,240)]; //Adjust X,Y,W,H as needed
+    [[self view] addSubview:PineView];
+    [PineView release], PineView=nil;
+
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height-50);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender {

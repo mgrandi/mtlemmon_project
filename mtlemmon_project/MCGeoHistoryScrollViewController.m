@@ -17,7 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", @"Bwahaha...more info", @"", nil];
+    NSArray *text = [NSArray arrayWithObjects:@"Some Info Here", @"Even more info", nil];
     pll = [[PListLoader alloc] init];
     
     for (int i = 0; i < text.count; i++) {
@@ -56,30 +56,28 @@
         myLabel.backgroundColor = [UIColor clearColor];
         [subview addSubview:myLabel];
         
+        
+        
         // release the items
         [myLabel release];
         [subview release];
         
         
         
-        // ************
-        // create the see picture button for the top right
-        // *************
         
-        UIButton *picButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-        [picButton setTitle:@"See Picture" forState:UIControlStateNormal];
-        
-        // add selector
-        [picButton addTarget:self action:@selector(picButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-        
-        [self.view addSubview:picButton];
-        
-        
-        // set the frame
-        picButton.frame = CGRectMake(210, 10, 90, 28);        
     }
     
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height);
+    // ************
+    // create the picture to compliment the text
+    // *************
+    
+    UIImageView *GneissView=[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GneissRock.png"]];
+    [GneissView setFrame:CGRectMake(0,0,self.scrollView.frame.size.width,150)]; //Adjust X,Y,W,H as needed
+    [[self view] addSubview:GneissView];
+    [GneissView release], GneissView=nil;
+    
+    
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * text.count, self.scrollView.frame.size.height-50);
 }
 
 
