@@ -33,6 +33,7 @@
 		157C2CAA1486AD4800C7373B /* WPLifeZonesScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157C2CA91486AD4800C7373B /* WPLifeZonesScrollView.xib */; };
 		157C2CAC1486AD6200C7373B /* WPBasinScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157C2CAB1486AD6200C7373B /* WPBasinScrollView.xib */; };
 		158DB2871485F7DD00374D90 /* MCLifeZonesScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 158DB2861485F7DD00374D90 /* MCLifeZonesScrollViewController.m */; };
+		15D2860B148B43510007B687 /* Hoodoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 15D2860A148B43510007B687 /* Hoodoo.png */; };
 		650F0B091465EC0900978029 /* MountainMapView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B081465EC0900978029 /* MountainMapView.xib */; };
 		650F0B0D1465EC8C00978029 /* MountainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountainMapViewController.m */; };
 		650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */; };
@@ -109,6 +110,7 @@
 		157C2CAB1486AD6200C7373B /* WPBasinScrollView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WPBasinScrollView.xib; sourceTree = "<group>"; };
 		158DB2851485F7DC00374D90 /* MCLifeZonesScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MCLifeZonesScrollViewController.h; path = MC/MCLifeZonesScrollViewController.h; sourceTree = "<group>"; };
 		158DB2861485F7DD00374D90 /* MCLifeZonesScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MCLifeZonesScrollViewController.m; path = MC/MCLifeZonesScrollViewController.m; sourceTree = "<group>"; };
+		15D2860A148B43510007B687 /* Hoodoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hoodoo.png; sourceTree = "<group>"; };
 		650F0B081465EC0900978029 /* MountainMapView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MountainMapView.xib; sourceTree = "<group>"; };
 		650F0B0B1465EC8C00978029 /* MountainMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MountainMapViewController.h; sourceTree = "<group>"; };
 		650F0B0C1465EC8C00978029 /* MountainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountainMapViewController.m; sourceTree = "<group>"; };
@@ -349,6 +351,7 @@
 		B8D5886C14819DA6000B3164 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				15D2860A148B43510007B687 /* Hoodoo.png */,
 				153F14FA148B18DE00D3478A /* PonderosaPine.png */,
 				153F14F5148AEC6F00D3478A /* GRClose-up.png */,
 				153F14F6148AEC6F00D3478A /* GneissRock.png */,
@@ -476,6 +479,7 @@
 				153F14F7148AEC6F00D3478A /* GRClose-up.png in Resources */,
 				153F14F8148AEC6F00D3478A /* GneissRock.png in Resources */,
 				153F14FB148B18DF00D3478A /* PonderosaPine.png in Resources */,
+				15D2860B148B43510007B687 /* Hoodoo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
