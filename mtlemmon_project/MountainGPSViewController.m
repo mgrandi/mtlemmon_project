@@ -150,7 +150,6 @@
 
 - (void)dealloc {
     [mapView release];
-    [mapView dealloc];
     [super dealloc];
 }
 
