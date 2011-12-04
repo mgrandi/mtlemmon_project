@@ -3,6 +3,10 @@
 <plist version="1.0">
 <dict>
 	<key>WPBasin0</key>
-	<string>WPBasin</string>
+	<string>Windy Point: Basin Formation                             - Seismic data shows us that The Tucson Basin developed through two phases; each phase 10 million years apart.                                                                   - 30 Million years ago: volcanic activity due to extension covered the region in lava flows and ash; followed by a series of faulting events.                                                       - Phase 1 Begins: Tilting of the volcanic rock [from lava flow and ash] units above the Catalina detachment and Santa Rita fault. Mini-basins were formed in this newly faulted region.</string>
+	<key>WPBasin1</key>
+	<string>- Earthquake and volcanic activity fill these new mini-basins with disturbed volcanic material in the surrounding beds.                                                        - 20 Million Years ago: rapid cooling event, extension stops and all is calm for ~10 million years.                                                       - 10 – 14 million years ago: Calm period ends.                                                                    - Phase 2 Begins: Catalina Mountains begin to be uplifted by Basin and Range style faulting begins to start forming the Tucson Basin.                                                         - Granite and gneiss rock start to fill the basin.</string>
+	<key>WPBasin2</key>
+	<string>- Next 300 meters of rock composition changes from granites to mainly limestones and volcanic rock. This new type of rock is consistent to what is seen in the Santa Rita mountains                                                                   - 5-7million years ago: Basin and Range style faulting comes to an end, which causes the Catalina core complex to also stop uplifting.</string>
 </dict>
 </plist>
