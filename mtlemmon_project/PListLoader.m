@@ -17,6 +17,14 @@
     return self;
 }
 
+-(void) dealloc {
+    
+    [plDict release];
+    [fileName release];
+    [super dealloc];
+    
+}
+
 // Use this method to 
 - (void) setAndScanFile: (NSString *) p 
 {
