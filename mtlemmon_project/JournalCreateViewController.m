@@ -8,6 +8,7 @@
 
 #import "JournalCreateViewController.h"
 
+
 // so, what does a journal entail?
 //
 // it should have:
@@ -35,6 +36,14 @@
     [super didReceiveMemoryWarning];
     
     // Release any cached data, images, etc that aren't in use.
+}
+
+-(IBAction)okButtonPressed:(id)sender {
+    
+    
+    
+    
+    
 }
 
 #pragma mark - View lifecycle

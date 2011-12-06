@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JournalCreateViewController : UIViewController
+@interface JournalCreateViewController : UIViewController <NSURLConnectionDataDelegate> {
+    
+    
+    IBOutlet UIButton *okButton;
+
+    
+}
 
 @end
