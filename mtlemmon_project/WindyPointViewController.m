@@ -11,6 +11,7 @@
 #import "WPLifeZonesScrollViewController.h"
 #import "WPGeologyScrollViewController.h"
 #import "WPBasinScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation WindyPointViewController
 
@@ -103,6 +104,18 @@
     WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
     [[self navigationController] pushViewController:wpGeo animated:YES];
     [wpGeo release];
+}
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
+- (void)journalButtonClicked:(id) sender {
+    
+    
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

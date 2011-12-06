@@ -10,6 +10,7 @@
 
 #import "MCGeoHistoryScrollViewController.h"
 #import "MCLifeZonesScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation MolinoCanyonViewController
 
@@ -75,9 +76,16 @@
     return self;
 }
 
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
 - (void)journalButtonClicked:(id) sender {
     
-    NSLog(@"hi");
+    
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
     
 }
 

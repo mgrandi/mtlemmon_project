@@ -11,6 +11,7 @@
 #import "IRFireScrollViewController.h"
 #import "IRGeologyScrollViewController.h"
 #import "IRLifeZonesScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation InspirationRockViewController
 
@@ -84,6 +85,18 @@
         
     }
     return self;
+}
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
+- (void)journalButtonClicked:(id) sender {
+    
+    
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
+    
 }
 
 // Do this action if the LIFE ZONES button is pressed
