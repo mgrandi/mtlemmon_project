@@ -10,6 +10,7 @@
 
 #import "MCGeoHistoryScrollViewController.h"
 #import "MCLifeZonesScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation MolinoCanyonViewController
 
@@ -21,6 +22,7 @@
         UIImage *bg = [UIImage imageNamed:@"background_1.png"];
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
         [self.view addSubview: bgv];
+        [bgv release];
         
         
         
@@ -43,6 +45,7 @@
         welcome.textColor = [UIColor whiteColor];
         welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);
         [self.view addSubview: welcome];
+        [welcome release];
         
         // *********************************************
         // Create Geo History Button
@@ -54,8 +57,7 @@
         [buttonGeo setTitle:@"Geo History" forState:UIControlStateNormal];
         [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         buttonGeo.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
-        [self.view addSubview:buttonGeo];
-        
+        [self.view addSubview:buttonGeo];        
         
         
         
@@ -74,9 +76,16 @@
     return self;
 }
 
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
 - (void)journalButtonClicked:(id) sender {
     
-    NSLog(@"hi");
+    
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
     
 }
 
@@ -96,12 +105,14 @@
 -(void) geoPressed: (id) sender {
     MCGeoHistoryScrollViewController *mcgh = [[MCGeoHistoryScrollViewController alloc] init];
     [[self navigationController] pushViewController:mcgh animated:YES];
+    [mcgh release];
 }
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
     MCLifeZonesScrollViewController *bclz = [[MCLifeZonesScrollViewController alloc] init];
     [[self navigationController] pushViewController:bclz animated:YES];
+    [bclz release];
 }
 
 - (void)viewDidUnload

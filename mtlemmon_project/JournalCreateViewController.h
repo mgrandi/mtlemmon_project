@@ -7,7 +7,21 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Journal.h"
 
-@interface JournalCreateViewController : UIViewController
+@interface JournalCreateViewController : UIViewController <NSURLConnectionDataDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+    
+    
+    IBOutlet UIButton *okButton;
+    IBOutlet UITextView *theTextView;
+    
+    UIImagePickerController *imagePicker;
+    
+    IBOutlet UIImageView *theImageView;
+
+
+    Journal *currentJournal;
+    
+}
 
 @end

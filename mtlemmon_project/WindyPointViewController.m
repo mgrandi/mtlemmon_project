@@ -11,6 +11,7 @@
 #import "WPLifeZonesScrollViewController.h"
 #import "WPGeologyScrollViewController.h"
 #import "WPBasinScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation WindyPointViewController
 
@@ -22,6 +23,7 @@
         UIImage *bg = [UIImage imageNamed:@"background_1.png"];
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
         [self.view addSubview: bgv];
+        [bgv release];
         
         // add the button to the top right of the navigation bar to take a journal entry
         UIBarButtonItem *journalButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
@@ -41,6 +43,7 @@
         welcome.textColor = [UIColor whiteColor];
         welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);
         [self.view addSubview: welcome];
+        [welcome release];
         
         
         // *********************************************
@@ -86,18 +89,33 @@
 -(void) lZPressed: (id) sender {
     WPLifeZonesScrollViewController *wplz = [[WPLifeZonesScrollViewController alloc] init];
     [[self navigationController] pushViewController:wplz animated:YES];
+    [wplz release];
 }
 
 // Do this action if the BASIN HISTORY button is pressed
 -(void) bHPressed: (id) sender {
     WPBasinScrollViewController *wpBas = [[WPBasinScrollViewController alloc] init];
     [[self navigationController] pushViewController:wpBas animated:YES];
+    [wpBas release];
 }
 
 // Do this action if the GEOLOGY button is pressed
 -(void) geoPressed: (id) sender {
     WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
     [[self navigationController] pushViewController:wpGeo animated:YES];
+    [wpGeo release];
+}
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
+- (void)journalButtonClicked:(id) sender {
+    
+    
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning

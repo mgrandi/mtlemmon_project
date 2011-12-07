@@ -49,10 +49,13 @@
 		65EDEAB31465CEB00009AC84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 65EDEAB11465CEB00009AC84 /* InfoPlist.strings */; };
 		65EDEAB51465CEB00009AC84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB41465CEB00009AC84 /* main.m */; };
 		65EDEAB91465CEB00009AC84 /* MtlemmonAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */; };
+		65F362CA148EF77D005DDCD9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65F362C9148EF77D005DDCD9 /* QuartzCore.framework */; };
 		65F77B3A1469C7B90034CF49 /* BearCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B391469C7B90034CF49 /* BearCanyonViewController.m */; };
 		65F77B3E1469C7D20034CF49 /* InspirationRockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B3D1469C7D20034CF49 /* InspirationRockViewController.m */; };
 		65F77B411469C7E60034CF49 /* WindyPointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B401469C7E60034CF49 /* WindyPointViewController.m */; };
 		65F77B441469C8000034CF49 /* MolinoCanyonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */; };
+		65FFF44E148EBDE700A1DD3A /* Journal.m in Sources */ = {isa = PBXBuildFile; fileRef = 65FFF44D148EBDE700A1DD3A /* Journal.m */; };
+		65FFF451148EBF2700A1DD3A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65FFF450148EBF2700A1DD3A /* CoreLocation.framework */; };
 		B80980DE1481613E00A969A3 /* WPGeologyScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80980DD1481613E00A969A3 /* WPGeologyScrollViewController.m */; };
 		B80980E1148161BF00A969A3 /* WPBasinScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B80980E0148161BF00A969A3 /* WPBasinScrollViewController.m */; };
 		B812F110147618B700115AC0 /* MainLogoTrans.png in Resources */ = {isa = PBXBuildFile; fileRef = B812F10F147618B700115AC0 /* MainLogoTrans.png */; };
@@ -137,6 +140,7 @@
 		65EDEAB61465CEB00009AC84 /* mtlemmon_project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "mtlemmon_project-Prefix.pch"; sourceTree = "<group>"; };
 		65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MtlemmonAppDelegate.h; sourceTree = "<group>"; };
 		65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MtlemmonAppDelegate.m; sourceTree = "<group>"; };
+		65F362C9148EF77D005DDCD9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		65F77B381469C7B90034CF49 /* BearCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BearCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B391469C7B90034CF49 /* BearCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BearCanyonViewController.m; sourceTree = "<group>"; };
 		65F77B3C1469C7D20034CF49 /* InspirationRockViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InspirationRockViewController.h; sourceTree = "<group>"; };
@@ -145,6 +149,9 @@
 		65F77B401469C7E60034CF49 /* WindyPointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WindyPointViewController.m; sourceTree = "<group>"; };
 		65F77B421469C7FF0034CF49 /* MolinoCanyonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MolinoCanyonViewController.h; sourceTree = "<group>"; };
 		65F77B431469C8000034CF49 /* MolinoCanyonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MolinoCanyonViewController.m; sourceTree = "<group>"; };
+		65FFF44C148EBDE700A1DD3A /* Journal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Journal.h; sourceTree = "<group>"; };
+		65FFF44D148EBDE700A1DD3A /* Journal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Journal.m; sourceTree = "<group>"; };
+		65FFF450148EBF2700A1DD3A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B80980DC1481613E00A969A3 /* WPGeologyScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPGeologyScrollViewController.h; sourceTree = "<group>"; };
 		B80980DD1481613E00A969A3 /* WPGeologyScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WPGeologyScrollViewController.m; sourceTree = "<group>"; };
 		B80980DF148161BF00A969A3 /* WPBasinScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WPBasinScrollViewController.h; sourceTree = "<group>"; };
@@ -188,6 +195,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65F362CA148EF77D005DDCD9 /* QuartzCore.framework in Frameworks */,
+				65FFF451148EBF2700A1DD3A /* CoreLocation.framework in Frameworks */,
 				B87E58881482E92F00E9593E /* MapKit.framework in Frameworks */,
 				65EDEAA91465CEB00009AC84 /* UIKit.framework in Frameworks */,
 				65EDEAAB1465CEB00009AC84 /* Foundation.framework in Frameworks */,
@@ -258,6 +267,8 @@
 		65EDEAA71465CEB00009AC84 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				65F362C9148EF77D005DDCD9 /* QuartzCore.framework */,
+				65FFF450148EBF2700A1DD3A /* CoreLocation.framework */,
 				B87E58871482E92F00E9593E /* MapKit.framework */,
 				65EDEAA81465CEB00009AC84 /* UIKit.framework */,
 				65EDEAAA1465CEB00009AC84 /* Foundation.framework */,
@@ -270,6 +281,8 @@
 			isa = PBXGroup;
 			children = (
 				65611E15148AF19800393D43 /* Libraries */,
+				65FFF44C148EBDE700A1DD3A /* Journal.h */,
+				65FFF44D148EBDE700A1DD3A /* Journal.m */,
 				65EDEAB71465CEB00009AC84 /* MtlemmonAppDelegate.h */,
 				65EDEAB81465CEB00009AC84 /* MtlemmonAppDelegate.m */,
 				B888EA971475DDD50086C127 /* AboutView.xib */,
@@ -528,6 +541,7 @@
 				65611E02148AD49800393D43 /* JournalCreateViewController.m in Sources */,
 				65611E12148AF18900393D43 /* JSONKit.m in Sources */,
 				65611E13148AF18900393D43 /* NSData+Base64.m in Sources */,
+				65FFF44E148EBDE700A1DD3A /* Journal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

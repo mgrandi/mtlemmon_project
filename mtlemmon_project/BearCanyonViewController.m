@@ -10,6 +10,7 @@
 
 #import "BCFireScrollViewController.h"
 #import "BCLifeZonesScrollViewController.h"
+#import "JournalCreateViewController.h"
 
 @implementation BearCanyonViewController
 
@@ -21,6 +22,7 @@
         UIImage *bg = [UIImage imageNamed:@"background_1.png"];
         UIImageView *bgv = [[UIImageView alloc] initWithImage: bg];
         [self.view addSubview: bgv];
+        [bgv release];
         
         // add the journal button to the navigation bar
         UIBarButtonItem *journalButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem: UIBarButtonSystemItemCompose target:self action:@selector(journalButtonClicked:)];
@@ -39,6 +41,7 @@
         welcome.textColor = [UIColor whiteColor];
         welcome.frame = CGRectMake(10.0, 20.0, [UIScreen mainScreen].bounds.size.width - 20.0, 130.0);
         [self.view addSubview: welcome];
+        [welcome release];
         
         // *********************************************
         // Create Fire Button
@@ -50,8 +53,7 @@
         [buttonFire setTitle:@"Fire" forState:UIControlStateNormal];
         [buttonFire setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
         buttonFire.frame = CGRectMake(20.0, 160.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
-        [self.view addSubview:buttonFire];
-        
+        [self.view addSubview:buttonFire];        
 
         
         
@@ -70,9 +72,16 @@
     return self;
 }
 
+
+// gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
 - (void)journalButtonClicked:(id) sender {
     
-    NSLog(@"hi");
+
+    JournalCreateViewController *jc = [[JournalCreateViewController alloc] initWithNibName:nil bundle:nil];
+    
+    [self.navigationController pushViewController:jc animated:YES];
+    [jc release];
+    
     
 }
 
@@ -92,12 +101,14 @@
 -(void) firePressed: (id) sender {
     BCFireScrollViewController *bcf = [[BCFireScrollViewController alloc] init];
     [[self navigationController] pushViewController:bcf animated:YES];
+    [bcf release];
 }
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
     BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
     [[self navigationController] pushViewController:bclz animated:YES];
+    [bclz release];
 }
 
 - (void)viewDidUnload
