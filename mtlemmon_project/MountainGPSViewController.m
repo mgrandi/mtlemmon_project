@@ -109,27 +109,37 @@
 -(void) bearCanyonPressed:(id)sender {
     BearCanyonViewController *bc = [[BearCanyonViewController alloc] init];
     [[self navigationController] pushViewController:bc animated:YES];
+    [bc release];
 }
 
 // This method will be called when the Inspiration Rock pin is pressed
 -(void) inspirationRockPressed:(id)sender {
     InspirationRockViewController *ir = [[InspirationRockViewController alloc] init];
     [[self navigationController] pushViewController:ir animated:YES];
+    [ir release];
 }
 
 // This method will be called when the Windy Point pin is pressed
 -(void) windyPointPressed:(id)sender {
     WindyPointViewController *wp = [[WindyPointViewController alloc] init];
     [[self navigationController] pushViewController:wp animated:YES];
+    [wp release];
 }
 
 // This method will be called when the Molino Canyon pin is pressed
 -(void) molinoCanyonPressed:(id)sender {
     MolinoCanyonViewController *mc = [[MolinoCanyonViewController alloc] init];
     [[self navigationController] pushViewController:mc animated:YES];
+    [mc release];
 }
 
-- (void) viewWillAppear:(BOOL)animated {
+
+-(void) viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
     
 }
 
@@ -140,7 +150,6 @@
 
 - (void)dealloc {
     [mapView release];
-    [mapView dealloc];
     [super dealloc];
 }
 
@@ -158,13 +167,13 @@
     MCPin.canShowCallout = YES;
     
     UIButton* MCButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    if ([annotation.title isEqualToString:@"Molino Canyon"]) {
+    if ([annotation isEqual:MCAnnotation]) {
         [MCButton addTarget:self action:@selector(molinoCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Bear Canyon"]) {
+    } else if ([annotation isEqual:BCAnnotation]) {
         [MCButton addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Windy Point"]) {
+    } else if ([annotation isEqual:WPAnnotation]) {
         [MCButton addTarget:self action:@selector(windyPointPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else if ([annotation.title isEqualToString:@"Inspiration Rock"]) {
+    } else if ([annotation isEqual:IRAnnotation]) {
         [MCButton addTarget:self action:@selector(inspirationRockPressed:) forControlEvents:UIControlEventTouchUpInside];
     } else {
         [MCButton addTarget:self action:@selector(returnToPrevious:) forControlEvents:UIControlEventTouchUpInside];
