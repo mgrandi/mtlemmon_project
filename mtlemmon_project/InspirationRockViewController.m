@@ -81,7 +81,8 @@
         [buttonGeo setTitle:@"Geology" forState:UIControlStateNormal];
         [buttonGeo setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
         buttonGeo.frame = CGRectMake(20.0, 270.0, [UIScreen mainScreen].bounds.size.width - 40.0 , 35.0);
-        [self.view addSubview:buttonGeo];
+        // removed because for geo the Hoodoo game was requested, no information to be displayed thus no need for this button
+        //   [self.view addSubview:buttonGeo];
         
     }
     return self;
