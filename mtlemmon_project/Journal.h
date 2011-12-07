@@ -22,11 +22,17 @@
 @interface Journal : NSObject {
     
     
-    NSString *journalText;
-    NSDate *date;
-    CLLocation *gpsCoord;
+    NSString *_journalText;
+    NSDate *_date;
+    CLLocation *g_psCoord;
+    UIImage *_image;
     
     
 }
+
+@property (nonatomic, retain) NSString *journalText;
+@property (nonatomic, retain) NSDate *date;
+@property (nonatomic, retain) CLLocation *gpsCoord;
+@property (nonatomic, retain) UIImage *image;
 
 @end

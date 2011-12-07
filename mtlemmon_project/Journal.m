@@ -8,7 +8,13 @@
 
 #import "Journal.h"
 
+
 @implementation Journal
+
+@synthesize journalText = _journalText;
+@synthesize date = _date;
+@synthesize gpsCoord = _gpsCoord;
+@synthesize image = _image;
 
 - (id)init
 {
@@ -16,10 +22,10 @@
     if (self) {
         // Initialization code here.
         
-        //self.journalText = nil;
-        journalText = nil;
-        gpsCoord = nil;
-        date = nil;
+        self.journalText = nil;
+        self.gpsCoord = nil;
+        self.date = nil;
+        self.image = nil;
         
     }
     
@@ -28,9 +34,10 @@
 
 -(void) dealloc {
     
-    [journalText release];
-    [gpsCoord release];
-    [date release];
+    [self.journalText release];
+    [self.gpsCoord release];
+    [self.date release];
+    [self.image release];
     [super dealloc];
     
     

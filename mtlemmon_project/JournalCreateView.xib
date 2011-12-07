@@ -180,7 +180,6 @@
 						<string key="NSFrame">{{20, 403}, {280, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:225</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -251,6 +250,14 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">theImageView</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="582141406"/>
+					</object>
+					<int key="connectionID">20</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="464313381"/>
 						<reference key="destination" ref="372490531"/>
@@ -280,12 +287,12 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="464313381"/>
-							<reference ref="747746292"/>
 							<reference ref="582141406"/>
 							<reference ref="147951529"/>
 							<reference ref="103866614"/>
 							<reference ref="450974920"/>
 							<reference ref="426971310"/>
+							<reference ref="747746292"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -355,7 +362,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">19</int>
+			<int key="maxID">20</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -364,12 +371,17 @@
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="okButton">UIButton</string>
+						<string key="theImageView">UIImageView</string>
 						<string key="theTextView">UITextView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="okButton">
 							<string key="name">okButton</string>
 							<string key="candidateClassName">UIButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="theImageView">
+							<string key="name">theImageView</string>
+							<string key="candidateClassName">UIImageView</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="theTextView">
 							<string key="name">theTextView</string>

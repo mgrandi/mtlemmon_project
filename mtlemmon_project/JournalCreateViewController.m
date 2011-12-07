@@ -52,17 +52,74 @@
 -(IBAction)okButtonPressed:(id)sender {
     
     
+   // do something with the currentJournal obj
     
+    // todo: do date and GPS coordinates!
     
     
 }
 
 // gets called when the camera button (the right button on the UINavigationBar) 
-// gets clicked
+// gets clicked. presents the camera / photo library
 -(void)cameraButtonClicked:(id) sender {
     
     
     NSLog(@"camera button clicked");
+    
+    // create the image picker and set its delegate
+    imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker setDelegate:self];
+    
+    // check to see if we have a camera
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        // set source type to camera
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        
+    } else {
+        
+        // set it to photo library if we don't have a camera
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        
+    }
+    
+    // show the modal interface
+    [self presentModalViewController:imagePicker animated:YES];
+    
+}
+
+// delegate method, gets called when the UIImagePickerController is done taking an 
+// image / picking an image
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    
+    UIImage *image = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    
+    NSLog(@"image picker got an image");
+    NSLog(@"image is: %@", image);
+    
+    // set the current journal's image
+    [currentJournal setImage:image];
+    
+    // set the image on the image view
+    [theImageView setImage:image];
+    
+
+    // dismiss the image picker and release it
+    [self dismissModalViewControllerAnimated:YES];
+    [imagePicker release];
+    
+}
+
+// delegate method, gets called when the UIImagePickerController cancels
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    
+    NSLog(@"image picker canceled");
+    
+    // dismiss the image picker and release it.
+    [self dismissModalViewControllerAnimated:YES];
+    [imagePicker release];
+    
     
 }
 
@@ -70,6 +127,9 @@
 -(void) textViewDidEndEditing:(UITextView *)textView {
     
     NSLog(@"text editing done");
+    
+    // save the user's text in the currentJournal obj
+    currentJournal.journalText = [textView text];
     
 }
 
@@ -104,7 +164,7 @@
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
     
-    // uitextview stuff
+    // uitextview stuff to make it so it has a nice rounded border
     [theTextView.layer setBackgroundColor: [[UIColor whiteColor] CGColor]];
     [theTextView.layer setBorderColor: [[UIColor grayColor] CGColor]];
     [theTextView.layer setBorderWidth: 1.0];
