@@ -24,7 +24,7 @@
     
     NSString *_journalText;
     NSDate *_date;
-    CLLocation *g_psCoord;
+    CLLocation *_gpsCoord;
     UIImage *_image;
     
     

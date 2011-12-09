@@ -9,7 +9,6 @@
 #import "JournalCreateViewController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "JSONKit.h"
-#import "NSData+Base64.h"
 #import "JsonUnsupportedClasses.h"
 
 
@@ -92,10 +91,63 @@
 // takes a NSData Json object and sends it to the server
 -(void)sendJsonDataToServer:(NSData *)jsonData {
     
-    NSURL *url = [NSURL URLWithString:@"http://www.kramidnarg.com/php_stuff/ios/json_dump.php/"];
-    
+    // create the mutable url request
+    NSURL *url = [NSURL URLWithString:@"http://www.kramidnarg.com/php_stuff/ios/ista392_process_journal.php"];
     NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
     
+    // set the data and http method
+    [req setHTTPBody:jsonData];    
+    [req setHTTPMethod:@"POST"];
+    
+    NSLog(@"connection request url is: %@", [req URL]);
+    
+    // create the connection and start it
+    NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:req delegate:self];
+    NSLog(@"Starting Connection!");
+    [connection start];
+    
+}
+
+// delegate method, gets called when the connetion did recieve a response
+// from the docs:
+// Sent when the connection has received sufficient data to construct the URL response for its request.
+// essentially this means it has enough information to actually send the request to the server.
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    
+    NSLog(@"connection did recieve response: %@", ((NSHTTPURLResponse *)response).allHeaderFields);
+
+    
+}
+
+// delegate method: gets called when we actually get data. this is called as we get data incrementally!!!!
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    
+    
+    // TODO FIXME OH GOD: i'm not appending data, so if we get more didReceiveData, then this won't work! Fix it!
+    NSString *result = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSLog(@"didRecieveData: %@", result);
+    
+    [result release];
+    
+}
+
+// delegate method: gets called when teh connection finishes loading
+// this is the last thing that gets called.
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    
+    NSLog(@"did finish loading");
+    
+    [connection release];
+}
+
+
+// delegate method. gets called if there was an error.
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"Connection failed with error: %@", error);
+    
+    [connection release];
 }
 
 // gets called when the camera button (the right button on the UINavigationBar) 
