@@ -22,6 +22,8 @@
     UIImagePickerController *imagePicker;
     
     IBOutlet UIImageView *theImageView;
+    
+    IBOutlet UIImageView *locationStatusView;
 
 
     Journal *currentJournal;

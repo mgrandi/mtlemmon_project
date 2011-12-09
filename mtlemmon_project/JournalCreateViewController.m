@@ -191,6 +191,9 @@
     
     [manager stopUpdatingLocation];
     
+    // set the location status image to be the green checkmark
+    [locationStatusView setImage:[UIImage imageNamed:@"tick.png"]];
+    
 }
 
 
@@ -214,6 +217,9 @@
     NSLog(@"Location manager got error: %@, stopping", error);
     
     [manager stopUpdatingLocation];
+    
+    // set the location status image to be the red cross
+    [locationStatusView setImage:[UIImage imageNamed:@"cross.png"]];
         
 }
 
@@ -229,6 +235,9 @@
         NSLog(@"Location service authorization status is now denied or restricted! Stopping");
         
         [manager stopUpdatingLocation];
+        
+        // set the location status image to be the red cross
+        [locationStatusView setImage:[UIImage imageNamed:@"cross.png"]];
         
     }
     
@@ -259,8 +268,8 @@
     [formatter release];
     
     
-    // set the text for the location label until we get / fail to get gps location
-    [locationLabel setText:@"Location: Loading..."];
+    // set the Location's status image to be waiting
+    [locationStatusView setImage:[UIImage imageNamed:@"time.png"]];
     
     // start trying to get a location
     [locationManager startUpdatingLocation];
