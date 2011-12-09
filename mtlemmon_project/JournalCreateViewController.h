@@ -9,11 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "Journal.h"
 
-@interface JournalCreateViewController : UIViewController <NSURLConnectionDataDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate> {
+@interface JournalCreateViewController : UIViewController <NSURLConnectionDataDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate> {
     
     
     IBOutlet UIButton *okButton;
+    
     IBOutlet UITextView *theTextView;
+    
+    IBOutlet UILabel *locationLabel;
+    IBOutlet UILabel *dateLabel;
     
     UIImagePickerController *imagePicker;
     
@@ -21,6 +25,8 @@
 
 
     Journal *currentJournal;
+    
+    CLLocationManager *locationManager;
     
 }
 

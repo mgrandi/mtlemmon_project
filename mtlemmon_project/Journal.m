@@ -24,7 +24,7 @@
         
         self.journalText = nil;
         self.gpsCoord = nil;
-        self.date = nil;
+        self.date = [NSDate date];
         self.image = nil;
         
     }

@@ -26,7 +26,8 @@
     if (self) {
         // Custom initialization
         
-
+        // create the current journal object
+        currentJournal = [[Journal alloc] init];
         
         
         // add the "take photo" button to the navigation bar
@@ -35,9 +36,20 @@
         [[self navigationItem] setRightBarButtonItem:cameraButton];
         [cameraButton release];
         
+        // create the location manager and set its delegate
+        locationManager = [[CLLocationManager alloc] init];
+        [locationManager setDelegate:self];
         
     }
     return self;
+}
+
+-(void) dealloc {
+    
+    [locationManager release];
+    [currentJournal release];
+    [super dealloc];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -155,6 +167,74 @@
     
 }
 
+// method to implement for location services
+// gets called when the location manager gets an update.
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    
+    
+    // we got a location: make sure its not cached...
+    NSTimeInterval timeInterval = [[newLocation timestamp] timeIntervalSinceNow];
+    
+    if ( timeInterval < -180.0 ) {
+        // This is cached data, you do not want it, keep looking
+        NSLog(@"time interval is invalid");
+        return;
+    }
+    
+    // else: we got a valid location. stop updating and save it in the journal
+    
+    NSLog(@"location services got a location! %@", newLocation);
+    
+    [currentJournal setGpsCoord:newLocation];
+    
+    [manager stopUpdatingLocation];
+    
+}
+
+
+// method to implement for location services
+// gets called when the location manager gets an update
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    
+    // check to see if this is a kCLErrorLocationUnknown error, 
+    // which just means it could not get a location instantly, and to keep trying again
+    if ([error code] == kCLErrorLocationUnknown) {
+       
+        NSLog(@"Location services unable to report location right away!");
+        return;
+        
+    } 
+        
+
+    // any other error means we should stop the location manager.
+        
+    NSLog(@"Location manager got error: %@, stopping", error);
+    
+    [manager stopUpdatingLocation];
+        
+}
+
+// method to implement for location services
+// gets called when the location manager's authorization status changes.
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    // we might not need this, but if the new status is Denied, then we need to stop the location manager
+    
+    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
+        
+        
+        NSLog(@"Location service authorization status is now denied or restricted! Stopping");
+        
+        [manager stopUpdatingLocation];
+        
+    }
+    
+}
+    
+
 #pragma mark - View lifecycle
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -170,6 +250,20 @@
     [theTextView.layer setBorderWidth: 1.0];
     [theTextView.layer setCornerRadius:8.0f];
     [theTextView.layer setMasksToBounds:YES];
+    
+    // set the date label
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateStyle:NSDateFormatterShortStyle];
+    [dateLabel setText:[NSString stringWithFormat:@"Date: %@", [formatter stringFromDate:[currentJournal date]]]]; 
+    [formatter release];
+    
+    
+    // set the text for the location label until we get / fail to get gps location
+    [locationLabel setText:@"Location: Loading..."];
+    
+    // start trying to get a location
+    [locationManager startUpdatingLocation];
     
 }
 
