@@ -39,6 +39,9 @@
 		650F0B0D1465EC8C00978029 /* MountainMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 650F0B0C1465EC8C00978029 /* MountainMapViewController.m */; };
 		650F0B1B1465FB0200978029 /* Blue_Map_Pin_small.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */; };
 		650F0B1E1465FB4800978029 /* Sky_Islands_Trip.png in Resources */ = {isa = PBXBuildFile; fileRef = 650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */; };
+		654425D11491EF69003B7114 /* cross.png in Resources */ = {isa = PBXBuildFile; fileRef = 654425CE1491EF69003B7114 /* cross.png */; };
+		654425D21491EF69003B7114 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 654425CF1491EF69003B7114 /* tick.png */; };
+		654425D31491EF69003B7114 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 654425D01491EF69003B7114 /* time.png */; };
 		65611E02148AD49800393D43 /* JournalCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65611E01148AD49800393D43 /* JournalCreateViewController.m */; };
 		65611E05148AD4BE00393D43 /* JournalCreateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65611E04148AD4BE00393D43 /* JournalCreateView.xib */; };
 		65611E12148AF18900393D43 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65611E0F148AF18900393D43 /* JSONKit.m */; };
@@ -123,6 +126,9 @@
 		650F0B0C1465EC8C00978029 /* MountainMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MountainMapViewController.m; sourceTree = "<group>"; };
 		650F0B1A1465FB0200978029 /* Blue_Map_Pin_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Blue_Map_Pin_small.png; sourceTree = "<group>"; };
 		650F0B1D1465FB4800978029 /* Sky_Islands_Trip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sky_Islands_Trip.png; sourceTree = "<group>"; };
+		654425CE1491EF69003B7114 /* cross.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross.png; sourceTree = "<group>"; };
+		654425CF1491EF69003B7114 /* tick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tick.png; sourceTree = "<group>"; };
+		654425D01491EF69003B7114 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		65611E00148AD49800393D43 /* JournalCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalCreateViewController.h; sourceTree = "<group>"; };
 		65611E01148AD49800393D43 /* JournalCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalCreateViewController.m; sourceTree = "<group>"; };
 		65611E04148AD4BE00393D43 /* JournalCreateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalCreateView.xib; sourceTree = "<group>"; };
@@ -374,6 +380,9 @@
 		B8D5886C14819DA6000B3164 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				654425CE1491EF69003B7114 /* cross.png */,
+				654425CF1491EF69003B7114 /* tick.png */,
+				654425D01491EF69003B7114 /* time.png */,
 				15D2860C148B4DA90007B687 /* IRFireImg.png */,
 				15D2860A148B43510007B687 /* Hoodoo.png */,
 				153F14FA148B18DE00D3478A /* PonderosaPine.png */,
@@ -504,8 +513,11 @@
 				153F14F8148AEC6F00D3478A /* GneissRock.png in Resources */,
 				153F14FB148B18DF00D3478A /* PonderosaPine.png in Resources */,
 				15D2860B148B43510007B687 /* Hoodoo.png in Resources */,
-				65611E05148AD4BE00393D43 /* JournalCreateView.xib in Resources */,				15D2860D148B4DA90007B687 /* IRFireImg.png in Resources */,
-
+				65611E05148AD4BE00393D43 /* JournalCreateView.xib in Resources */,
+				15D2860D148B4DA90007B687 /* IRFireImg.png in Resources */,
+				654425D11491EF69003B7114 /* cross.png in Resources */,
+				654425D21491EF69003B7114 /* tick.png in Resources */,
+				654425D31491EF69003B7114 /* time.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
