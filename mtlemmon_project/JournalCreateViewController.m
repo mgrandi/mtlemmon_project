@@ -83,8 +83,18 @@
     
     NSData *jsonData = [journalArray JSONDataWithOptions:JKParseOptionNone serializeUnsupportedClassesUsingDelegate:[JsonUnsupportedClasses class] selector:@selector(serializeUnsupported:) error:&error];
     
-    NSLog(@"done");
+    [self sendJsonDataToServer:jsonData];
     
+    
+}
+
+
+// takes a NSData Json object and sends it to the server
+-(void)sendJsonDataToServer:(NSData *)jsonData {
+    
+    NSURL *url = [NSURL URLWithString:@"http://www.kramidnarg.com/php_stuff/ios/json_dump.php/"];
+    
+    NSMutableURLRequest *req = [[NSMutableURLRequest alloc] initWithURL:url];
     
 }
 

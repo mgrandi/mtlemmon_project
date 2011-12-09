@@ -43,6 +43,7 @@
 		654425D21491EF69003B7114 /* tick.png in Resources */ = {isa = PBXBuildFile; fileRef = 654425CF1491EF69003B7114 /* tick.png */; };
 		654425D31491EF69003B7114 /* time.png in Resources */ = {isa = PBXBuildFile; fileRef = 654425D01491EF69003B7114 /* time.png */; };
 		654425D714927202003B7114 /* JsonUnsupportedClasses.m in Sources */ = {isa = PBXBuildFile; fileRef = 654425D614927202003B7114 /* JsonUnsupportedClasses.m */; };
+		654425D9149276FE003B7114 /* ista392_process_journal.php in Resources */ = {isa = PBXBuildFile; fileRef = 654425D8149276FE003B7114 /* ista392_process_journal.php */; };
 		65611E02148AD49800393D43 /* JournalCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65611E01148AD49800393D43 /* JournalCreateViewController.m */; };
 		65611E05148AD4BE00393D43 /* JournalCreateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65611E04148AD4BE00393D43 /* JournalCreateView.xib */; };
 		65611E12148AF18900393D43 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 65611E0F148AF18900393D43 /* JSONKit.m */; };
@@ -132,6 +133,7 @@
 		654425D01491EF69003B7114 /* time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = time.png; sourceTree = "<group>"; };
 		654425D514927201003B7114 /* JsonUnsupportedClasses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JsonUnsupportedClasses.h; sourceTree = "<group>"; };
 		654425D614927202003B7114 /* JsonUnsupportedClasses.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JsonUnsupportedClasses.m; sourceTree = "<group>"; };
+		654425D8149276FE003B7114 /* ista392_process_journal.php */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.php; path = ista392_process_journal.php; sourceTree = "<group>"; };
 		65611E00148AD49800393D43 /* JournalCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JournalCreateViewController.h; sourceTree = "<group>"; };
 		65611E01148AD49800393D43 /* JournalCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JournalCreateViewController.m; sourceTree = "<group>"; };
 		65611E04148AD4BE00393D43 /* JournalCreateView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JournalCreateView.xib; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 		65EDEAAE1465CEB00009AC84 /* mtlemmon_project */ = {
 			isa = PBXGroup;
 			children = (
+				654425D8149276FE003B7114 /* ista392_process_journal.php */,
 				65611E15148AF19800393D43 /* Libraries */,
 				65FFF44C148EBDE700A1DD3A /* Journal.h */,
 				65FFF44D148EBDE700A1DD3A /* Journal.m */,
@@ -523,6 +526,7 @@
 				654425D11491EF69003B7114 /* cross.png in Resources */,
 				654425D21491EF69003B7114 /* tick.png in Resources */,
 				654425D31491EF69003B7114 /* time.png in Resources */,
+				654425D9149276FE003B7114 /* ista392_process_journal.php in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,4 +25,6 @@
     
 }
 
+-(void)sendJsonDataToServer:(NSData *)jsonData;
+
 @end
