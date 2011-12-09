@@ -13,21 +13,14 @@
     
     
     IBOutlet UIButton *okButton;
-    
     IBOutlet UITextView *theTextView;
-    
     IBOutlet UILabel *locationLabel;
     IBOutlet UILabel *dateLabel;
-    
-    UIImagePickerController *imagePicker;
-    
     IBOutlet UIImageView *theImageView;
-    
     IBOutlet UIImageView *locationStatusView;
-
-
-    Journal *currentJournal;
     
+    Journal *currentJournal;
+    UIImagePickerController *imagePicker;
     CLLocationManager *locationManager;
     
 }

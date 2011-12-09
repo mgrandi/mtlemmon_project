@@ -8,6 +8,9 @@
 
 #import "JournalCreateViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "JSONKit.h"
+#import "NSData+Base64.h"
+#import "JsonUnsupportedClasses.h"
 
 
 // so, what does a journal entail?
@@ -46,6 +49,9 @@
 
 -(void) dealloc {
     
+    // don't need to release imagePicker because it gets created and released 
+    // on its own by using the delegate methods we implemented here.
+    
     [locationManager release];
     [currentJournal release];
     [super dealloc];
@@ -64,9 +70,20 @@
 -(IBAction)okButtonPressed:(id)sender {
     
     
-   // do something with the currentJournal obj
+    // get the journal text
+    [currentJournal setJournalText:[theTextView text]];
     
-    // todo: do date and GPS coordinates!
+    
+    // TEMPORARY FOR NOW, until i make a static class that holds all of the Journal objects
+    // just put this one into an array and send it to the server
+    NSArray *journalArray = [NSArray arrayWithObject:currentJournal];
+    
+    // the error we are passing into the method call below
+    NSError *error = nil;
+    
+    NSData *jsonData = [journalArray JSONDataWithOptions:JKParseOptionNone serializeUnsupportedClassesUsingDelegate:[JsonUnsupportedClasses class] selector:@selector(serializeUnsupported:) error:&error];
+    
+    NSLog(@"done");
     
     
 }
