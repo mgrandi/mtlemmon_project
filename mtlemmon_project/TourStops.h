@@ -1,23 +1,24 @@
 //
-//  IRFireScrollViewController.h
+//  TourStops.h
 //  mtlemmon_project
 //
-//  Created by Patrick Rickards on 11/29/11.
+//  Created by Patrick Rickards on 12/13/11.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import "PListLoader.h"
 
-@interface IRFireScrollViewController : UIViewController{
-
-UIScrollView* scrollView;
-UIPageControl* pageControl;
-
-PListLoader* pll;
+@interface TourStops : UIViewController {
+    UIScrollView* scrollView;
+    UIPageControl* pageControl;
+    NSString* stop;
+    
+    PListLoader* pll;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender;
+- (void)setStop:(NSString *)setter;
 
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl* pageControl;

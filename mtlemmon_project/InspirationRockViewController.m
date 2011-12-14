@@ -8,9 +8,8 @@
 
 #import "InspirationRockViewController.h"
 
-#import "IRFireScrollViewController.h"
-#import "IRGeologyScrollViewController.h"
-#import "IRLifeZonesScrollViewController.h"
+#import "TourStops.h"
+
 #import "JournalCreateViewController.h"
 
 @implementation InspirationRockViewController
@@ -102,23 +101,26 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    IRLifeZonesScrollViewController *irlz = [[IRLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:irlz animated:YES];
-    [irlz release];
+    TourStops *lz = [[TourStops alloc] init];
+    [lz setStop:@"IRLifeZones"];
+    [[self navigationController] pushViewController:lz animated:YES];
+    [lz release];
 }
 
 // Do this action if the FIRE button is pressed
 -(void) firePressed: (id) sender {
-    IRFireScrollViewController *irFire = [[IRFireScrollViewController alloc] init];
-    [[self navigationController] pushViewController:irFire animated:YES];
-    [irFire release];
+    TourStops *fire = [[TourStops alloc] init];
+    [fire setStop:@"IRFire"];
+    [[self navigationController] pushViewController:fire animated:YES];
+    [fire release];
 }
 
 // Do this action if the GEOLOGY button is pressed
 -(void) geoPressed: (id) sender {
-    IRGeologyScrollViewController *irGeo = [[IRGeologyScrollViewController alloc] init];
-    [[self navigationController] pushViewController:irGeo animated:YES];
-    [irGeo release];
+    TourStops *geo = [[TourStops alloc] init];
+    [geo setStop:@"IRGeology"];
+    [[self navigationController] pushViewController:geo animated:YES];
+    [geo release];
 }
 
 - (void)didReceiveMemoryWarning

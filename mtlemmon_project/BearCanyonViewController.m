@@ -8,8 +8,8 @@
 
 #import "BearCanyonViewController.h"
 
-#import "BCFireScrollViewController.h"
-#import "BCLifeZonesScrollViewController.h"
+#import "TourStops.h"
+
 #import "JournalCreateViewController.h"
 
 @implementation BearCanyonViewController
@@ -99,16 +99,18 @@
 
 // Do this action if the FIRE button is pressed
 -(void) firePressed: (id) sender {
-    BCFireScrollViewController *bcf = [[BCFireScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bcf animated:YES];
-    [bcf release];
+    TourStops *fire = [[TourStops alloc] init];
+    [fire setStop:@"BCFire"];
+    [[self navigationController] pushViewController:fire animated:YES];
+    [fire release];
 }
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    BCLifeZonesScrollViewController *bclz = [[BCLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bclz animated:YES];
-    [bclz release];
+    TourStops *lz = [[TourStops alloc] init];
+    [lz setStop:@"BCLifeZones"];
+    [[self navigationController] pushViewController:lz animated:YES];
+    [lz release];
 }
 
 - (void)viewDidUnload

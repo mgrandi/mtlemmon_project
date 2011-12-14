@@ -8,8 +8,8 @@
 
 #import "MolinoCanyonViewController.h"
 
-#import "MCGeoHistoryScrollViewController.h"
-#import "MCLifeZonesScrollViewController.h"
+#import "TourStops.h"
+
 #import "JournalCreateViewController.h"
 
 @implementation MolinoCanyonViewController
@@ -103,16 +103,19 @@
 
 // Do this action if the FIRE button is pressed
 -(void) geoPressed: (id) sender {
-    MCGeoHistoryScrollViewController *mcgh = [[MCGeoHistoryScrollViewController alloc] init];
-    [[self navigationController] pushViewController:mcgh animated:YES];
-    [mcgh release];
+    TourStops *geo = [[TourStops alloc] init];
+    [geo setStop:@"MCGeoHistory"];
+    [[self navigationController] pushViewController:geo animated:YES];
+    [geo release];
 }
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    MCLifeZonesScrollViewController *bclz = [[MCLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:bclz animated:YES];
-    [bclz release];
+    TourStops *lz = [[TourStops alloc] init];
+    [lz setStop:@"MCLifeZones"];
+    [[self navigationController] pushViewController:lz animated:YES];
+    [lz release];
+
 }
 
 - (void)viewDidUnload

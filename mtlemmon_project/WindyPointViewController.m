@@ -8,9 +8,8 @@
 
 #import "WindyPointViewController.h"
 
-#import "WPLifeZonesScrollViewController.h"
-#import "WPGeologyScrollViewController.h"
-#import "WPBasinScrollViewController.h"
+#import "TourStops.h"
+
 #import "JournalCreateViewController.h"
 
 @implementation WindyPointViewController
@@ -87,23 +86,26 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    WPLifeZonesScrollViewController *wplz = [[WPLifeZonesScrollViewController alloc] init];
-    [[self navigationController] pushViewController:wplz animated:YES];
-    [wplz release];
+    TourStops *lz = [[TourStops alloc] init];
+    [lz setStop:@"WPLifeZones"];
+    [[self navigationController] pushViewController:lz animated:YES];
+    [lz release];
 }
 
 // Do this action if the BASIN HISTORY button is pressed
 -(void) bHPressed: (id) sender {
-    WPBasinScrollViewController *wpBas = [[WPBasinScrollViewController alloc] init];
-    [[self navigationController] pushViewController:wpBas animated:YES];
-    [wpBas release];
+    TourStops *basin = [[TourStops alloc] init];
+    [basin setStop:@"WPBasin"];
+    [[self navigationController] pushViewController:basin animated:YES];
+    [basin release];
 }
 
 // Do this action if the GEOLOGY button is pressed
 -(void) geoPressed: (id) sender {
-    WPGeologyScrollViewController *wpGeo = [[WPGeologyScrollViewController alloc] init];
-    [[self navigationController] pushViewController:wpGeo animated:YES];
-    [wpGeo release];
+    TourStops *geo = [[TourStops alloc] init];
+    [geo setStop:@"WPGeology"];
+    [[self navigationController] pushViewController:geo animated:YES];
+    [geo release];
 }
 
 // gets called when the user clicks the 'compose' button, the right button on the UINavigationBar
