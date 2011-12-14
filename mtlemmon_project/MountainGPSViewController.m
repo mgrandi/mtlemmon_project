@@ -28,6 +28,10 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
+        // create the location manager and set its delegate
+        locationManager = [[CLLocationManager alloc] init];
+        [locationManager setDelegate:self];
  
         CGRect uiViewBounds = self.view.bounds;
         
@@ -123,8 +127,82 @@
         // set the frame
         journalButton.frame = CGRectMake(210, 10, 90, 28);
         
+        // start updating for a location
+        [locationManager startUpdatingLocation];
+        
     }
     return self;
+}
+
+// method to implement for location services
+// gets called when the location manager gets an update.
+- (void)locationManager:(CLLocationManager *)manager
+    didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    
+    // we got a location: make sure its not cached...
+    NSTimeInterval timeInterval = [[newLocation timestamp] timeIntervalSinceNow];
+    
+    if ( timeInterval < -180.0 ) {
+        // This is cached data, you do not want it, keep looking
+        NSLog(@"gps view: time interval is invalid");
+        return;
+    }
+    
+    
+    NSLog(@"gps view: location services got a location! %@", newLocation);
+    
+    // else: we got a valid location. create a mt lemmon annotation and put it on map view
+    MtLemmonAnnotation *currentLocation = [[MtLemmonAnnotation alloc] initWithCoordinate:[newLocation coordinate]];
+    [currentLocation setTitle:@"Current Location"];
+    [currentLocation setSubtitle:@"Your current location"];
+    [mapView addAnnotation:currentLocation];
+    [currentLocation release];
+        
+    [manager stopUpdatingLocation];
+    
+    
+}
+
+// method to implement for location services
+// gets called when the location manager gets an update
+- (void)locationManager:(CLLocationManager *)manager
+       didFailWithError:(NSError *)error {
+    
+    // check to see if this is a kCLErrorLocationUnknown error, 
+    // which just means it could not get a location instantly, and to keep trying again
+    if ([error code] == kCLErrorLocationUnknown) {
+        
+        NSLog(@"gps view: Location services unable to report location right away!");
+        return;
+        
+    } 
+    
+    
+    // any other error means we should stop the location manager.
+    
+    NSLog(@"gps view: Location manager got error: %@, stopping", error);
+    
+    [manager stopUpdatingLocation];
+    
+}
+
+
+// method to implement for location services
+// gets called when the location manager's authorization status changes.
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    
+    
+    // we might not need this, but if the new status is Denied, then we need to stop the location manager
+    
+    if (status == kCLAuthorizationStatusDenied || status == kCLAuthorizationStatusRestricted) {
+        
+        
+        NSLog(@"gps view: Location service authorization status is now denied or restricted! Stopping");
+        
+        [manager stopUpdatingLocation];
+    }
+    
 }
 
 // gets called when the journal button gets clicked
@@ -203,16 +281,17 @@
     UIButton* MCButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     if ([annotation isEqual:MCAnnotation]) {
         [MCButton addTarget:self action:@selector(molinoCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        MCPin.rightCalloutAccessoryView = MCButton;
     } else if ([annotation isEqual:BCAnnotation]) {
         [MCButton addTarget:self action:@selector(bearCanyonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        MCPin.rightCalloutAccessoryView = MCButton;
     } else if ([annotation isEqual:WPAnnotation]) {
         [MCButton addTarget:self action:@selector(windyPointPressed:) forControlEvents:UIControlEventTouchUpInside];
+        MCPin.rightCalloutAccessoryView = MCButton;
     } else if ([annotation isEqual:IRAnnotation]) {
         [MCButton addTarget:self action:@selector(inspirationRockPressed:) forControlEvents:UIControlEventTouchUpInside];
-    } else {
-        [MCButton addTarget:self action:@selector(returnToPrevious:) forControlEvents:UIControlEventTouchUpInside];
-    }
-    MCPin.rightCalloutAccessoryView = MCButton;
+        MCPin.rightCalloutAccessoryView = MCButton;
+    }     
     return MCPin;
 }
 

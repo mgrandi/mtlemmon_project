@@ -87,23 +87,23 @@
             
             // what is the significance of these y orgin coordinates? 
             // they seem random....
-            if (stop == @"BCFire")
+            if ([stop isEqualToString:@"BCFire"])
                 frame.origin.y = 80;
-            else if (stop == @"BCLifeZones")
+            else if ([stop isEqualToString:@"BCLifeZones"])
                 frame.origin.y = -70;
-            else if (stop == @"MCGeoHistory")
+            else if ([stop isEqualToString:@"MCGeoHistory"])
                 frame.origin.y = 40;
-            else if (stop == @"MCLifeZones")
+            else if ([stop isEqualToString:@"MCLifeZones"])
                 frame.origin.y = -100;
-            else if (stop == @"WPLifeZones" || stop == @"WPBasin")
+            else if ([stop isEqualToString:@"WPLifeZones"] || [stop isEqualToString: @"WPBasin"])
                 frame.origin.y = -50;
-            else if (stop == @"WPGeology")
+            else if ([stop isEqualToString:@"WPGeology"])
                 frame.origin.y = 50;
-            else if (stop == @"IRGeology")
+            else if ([stop isEqualToString: @"IRGeology"])
                 frame.origin.y = 0;
-            else if (stop == @"IRFire")
+            else if ([stop isEqualToString: @"IRFire"])
                 frame.origin.y = 70;
-            else if (stop == @"IRLifeZones")
+            else if ([stop isEqualToString: @"IRLifeZones"])
                 frame.origin.y = -40;
         
             frame.size = frameSize;
