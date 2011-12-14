@@ -2,7 +2,7 @@
 //  MainMenuViewController.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/17/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //  
 //  This ViewController Controls the view of the main menu of the whole applicatin
@@ -13,7 +13,11 @@
 #import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
-// Begin implementation of this ViewController
+/*
+ This is the ViewController for the main menu view that users will see when they
+ first start uo the app.  The constructor loads images.  This class also contains
+ methods that are attached to the buttons on the main menu for changing views.
+ */
 @implementation MainMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

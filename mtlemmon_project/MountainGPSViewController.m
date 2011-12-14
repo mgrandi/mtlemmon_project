@@ -2,7 +2,7 @@
 //  MountainGPSViewController.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/27/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
@@ -14,6 +14,11 @@
 #import "WindyPointViewController.h"
 #import "InspirationRockViewController.h"
 
+/*
+ This is the ViewController for the Google-maps GPS map view.  It contains 4
+ annotation views that when clicked on can direct the user to more information
+ about the given point.
+ */
 @implementation MountainGPSViewController
 
 @synthesize mapView;

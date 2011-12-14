@@ -2,8 +2,8 @@
 //  PListLoader.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/26/11.
-//  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
+//  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import "PListLoader.h"
@@ -25,7 +25,8 @@
     
 }
 
-// Use this method to 
+// Use this method by passing a string to it.  It will scan in a plist file 
+// with the provided name to a NSDictionary
 - (void) setAndScanFile: (NSString *) p 
 {
     fileName = p;
@@ -36,6 +37,7 @@
     plDict = [[NSDictionary dictionaryWithContentsOfFile:finalPath] retain];
 }
 
+// This method returns the String at a give index of the scanned-in plist 
 - (NSString *) getStringAtIndex: (int) i 
 {
     NSString *integ = [NSString stringWithFormat:@"%d", i];

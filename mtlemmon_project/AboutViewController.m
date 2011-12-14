@@ -2,7 +2,7 @@
 //  AboutViewController.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/17/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 // This is the ViewController implementation for the about page of the app
@@ -11,7 +11,10 @@
 // Import needed header files here
 #import "AboutViewController.h"
 
-// Begin implementation
+/*
+ This is the ViewController for the about page.  This ViewController is not very complex,
+ It basically justs loads some graphics and a button
+ */
 @implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

@@ -2,12 +2,16 @@
 //  MtLemmonAnnotation.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/27/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
 #import "MtLemmonAnnotation.h"
 
+/*
+ This is the custom implementation of the MKAnnotation protocol that is used for
+ the Google-maps GPS View.
+ */
 @implementation MtLemmonAnnotation
 
 @synthesize coordinate = _coo;
