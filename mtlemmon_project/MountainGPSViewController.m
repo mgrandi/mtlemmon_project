@@ -14,6 +14,11 @@
 #import "WindyPointViewController.h"
 #import "InspirationRockViewController.h"
 
+/*
+ This is the ViewController for the Google-maps GPS map view.  It contains 4
+ annotation views that when clicked on can direct the user to more information
+ about the given point.
+ */
 @implementation MountainGPSViewController
 
 @synthesize mapView;

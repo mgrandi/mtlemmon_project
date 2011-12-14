@@ -13,7 +13,11 @@
 #import "MountainGPSViewController.h"
 #import "AboutViewController.h"
 
-// Begin implementation of this ViewController
+/*
+ This is the ViewController for the main menu view that users will see when they
+ first start uo the app.  The constructor loads images.  This class also contains
+ methods that are attached to the buttons on the main menu for changing views.
+ */
 @implementation MainMenuViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

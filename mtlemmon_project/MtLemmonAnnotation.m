@@ -8,6 +8,10 @@
 
 #import "MtLemmonAnnotation.h"
 
+/*
+ This is the custom implementation of the MKAnnotation protocol that is used for
+ the Google-maps GPS View.
+ */
 @implementation MtLemmonAnnotation
 
 @synthesize coordinate = _coo;

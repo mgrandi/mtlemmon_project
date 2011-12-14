@@ -11,7 +11,10 @@
 // Import needed header files here
 #import "AboutViewController.h"
 
-// Begin implementation
+/*
+ This is the ViewController for the about page.  This ViewController is not very complex,
+ It basically justs loads some graphics and a button
+ */
 @implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
