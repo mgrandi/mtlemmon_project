@@ -103,7 +103,7 @@
 
 // Do this action if the FIRE button is pressed
 -(void) geoPressed: (id) sender {
-    TourStops *geo = [[TourStops alloc] init];
+    TourStops *geo = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [geo setStop:@"MCGeoHistory"];
     [[self navigationController] pushViewController:geo animated:YES];
     [geo release];
@@ -111,7 +111,7 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    TourStops *lz = [[TourStops alloc] init];
+    TourStops *lz = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [lz setStop:@"MCLifeZones"];
     [[self navigationController] pushViewController:lz animated:YES];
     [lz release];

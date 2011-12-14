@@ -86,7 +86,7 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    TourStops *lz = [[TourStops alloc] init];
+    TourStops *lz = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [lz setStop:@"WPLifeZones"];
     [[self navigationController] pushViewController:lz animated:YES];
     [lz release];
@@ -94,7 +94,7 @@
 
 // Do this action if the BASIN HISTORY button is pressed
 -(void) bHPressed: (id) sender {
-    TourStops *basin = [[TourStops alloc] init];
+    TourStops *basin = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [basin setStop:@"WPBasin"];
     [[self navigationController] pushViewController:basin animated:YES];
     [basin release];
@@ -102,7 +102,7 @@
 
 // Do this action if the GEOLOGY button is pressed
 -(void) geoPressed: (id) sender {
-    TourStops *geo = [[TourStops alloc] init];
+    TourStops *geo = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [geo setStop:@"WPGeology"];
     [[self navigationController] pushViewController:geo animated:YES];
     [geo release];

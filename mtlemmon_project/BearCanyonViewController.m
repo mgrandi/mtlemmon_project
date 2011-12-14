@@ -99,7 +99,7 @@
 
 // Do this action if the FIRE button is pressed
 -(void) firePressed: (id) sender {
-    TourStops *fire = [[TourStops alloc] init];
+    TourStops *fire = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [fire setStop:@"BCFire"];
     [[self navigationController] pushViewController:fire animated:YES];
     [fire release];
@@ -107,7 +107,7 @@
 
 // Do this action if the LIFE ZONES button is pressed
 -(void) lZPressed: (id) sender {
-    TourStops *lz = [[TourStops alloc] init];
+    TourStops *lz = [[TourStops alloc] initWithNibName:nil bundle:nil];
     [lz setStop:@"BCLifeZones"];
     [[self navigationController] pushViewController:lz animated:YES];
     [lz release];

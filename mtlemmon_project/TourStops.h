@@ -14,12 +14,12 @@
     UIPageControl* pageControl;
     NSString* stop;
     
-    PListLoader* pll;
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender;
 - (void)setStop:(NSString *)setter;
 
+@property (nonatomic, retain) NSString *stop;
 @property (nonatomic, retain) IBOutlet UIScrollView* scrollView;
 @property (nonatomic, retain) IBOutlet UIPageControl* pageControl;
 @property (assign) id<UIScrollViewDelegate> delegate;
