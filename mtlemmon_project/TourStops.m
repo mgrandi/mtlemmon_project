@@ -128,6 +128,8 @@
         [subview addSubview:myLabel];
         
         // release the items
+        [pll release];
+        [text release];
         [myLabel release];
         [subview release];
     }
