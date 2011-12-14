@@ -13,6 +13,7 @@
 #import "BearCanyonViewController.h"
 #import "WindyPointViewController.h"
 #import "InspirationRockViewController.h"
+#import "JournalCreateViewController.h"
 
 /*
  This is the ViewController for the Google-maps GPS map view.  It contains 4
@@ -106,8 +107,36 @@
         buttonBack.frame = CGRectMake(20.0, ([UIScreen mainScreen].bounds.size.height - 70), 60.0, 35.0);
         [self.view addSubview:buttonBack];
         
+        // ************
+        // create the journal button for the top right
+        // *************
+        
+        UIButton *journalButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+        [journalButton setTitle:@"Journal" forState:UIControlStateNormal];
+        
+        // add selector
+        [journalButton addTarget:self action:@selector(journalButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [self.view addSubview:journalButton];
+        
+        
+        // set the frame
+        journalButton.frame = CGRectMake(210, 10, 90, 28);
+        
     }
     return self;
+}
+
+// gets called when the journal button gets clicked
+-(void) journalButtonPressed:(id) sender {
+    
+    NSLog(@"pressed");
+    
+    JournalCreateViewController *jcv = [[JournalCreateViewController alloc]initWithNibName:nil bundle:nil];
+    [[self navigationController] pushViewController:jcv animated:YES];
+    [jcv release];
+    
+    
 }
 
 // This method will be called when the Bear Canyon pin is pressed
@@ -139,9 +168,9 @@
 }
 
 
--(void) viewDidAppear:(BOOL)animated {
+-(void) viewWillAppear:(BOOL)animated {
     
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
     
