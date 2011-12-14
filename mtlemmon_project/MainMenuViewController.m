@@ -2,7 +2,7 @@
 //  MainMenuViewController.m
 //  mtlemmon_project
 //
-//  Created by Benjamin Dicken on 11/17/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //  
 //  This ViewController Controls the view of the main menu of the whole applicatin

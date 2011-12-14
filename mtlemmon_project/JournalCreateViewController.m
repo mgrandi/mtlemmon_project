@@ -2,7 +2,7 @@
 //  JournalCreateViewController.m
 //  mtlemmon_project
 //
-//  Created by Mark Grandi on 12/3/11.
+//  Created by Benjamin Dicken, Mark Grandi, Charles Rickards and Stefan Lindstrom on 11/27/11.
 //  Copyright (c) 2011 Flandrau Science Center, UofA. All rights reserved.
 //
 
